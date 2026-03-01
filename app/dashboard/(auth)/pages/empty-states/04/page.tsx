@@ -1,21 +1,21 @@
-import { Button } from "@/components/ui/button";
+import { generateMeta } from "@/lib/utils";
 import {
   Empty,
   EmptyContent,
-  EmptyDescription,
-  EmptyHeader,
   EmptyMedia,
+  EmptyHeader,
+  EmptyDescription,
   EmptyTitle
 } from "@/components/ui/empty";
-import { generateMeta } from "@/lib/utils";
-import { FolderCodeIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { WifiOffIcon } from "lucide-react";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Shadcn Empty State 01",
+    title: "Shadcn Empty State 04",
     description:
       "Empty states show placeholder content when no data is available. Built with shadcn/ui, Tailwind CSS, Next.js and React.",
-    canonical: "/pages/empty-states/01"
+    canonical: "/pages/empty-states/04"
   });
 }
 
@@ -24,18 +24,15 @@ export default function Page() {
     <Empty className="h-(--content-full-height)">
       <EmptyHeader>
         <EmptyMedia variant="icon">
-          <FolderCodeIcon />
+          <WifiOffIcon />
         </EmptyMedia>
-        <EmptyTitle className="text-xl">No Projects Yet</EmptyTitle>
+        <EmptyTitle className="text-xl">No Internet Connection</EmptyTitle>
         <EmptyDescription>
-          You haven&apos;t created any projects yet. Get started by creating your first project.
+          It seems you are offline. Check your internet connection and try again.
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent className="flex-row justify-center gap-2">
-        <Button size="sm">Create Project</Button>
-        <Button size="sm" variant="outline">
-          Import Project
-        </Button>
+        <Button size="sm">Try Again</Button>
       </EmptyContent>
     </Empty>
   );

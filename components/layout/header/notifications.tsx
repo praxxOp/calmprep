@@ -45,7 +45,7 @@ const Notifications = () => {
               <div className="flex flex-1 items-start gap-2">
                 <div className="flex-none">
                   <Avatar className="size-8">
-                    <AvatarImage src={`/images/avatars/${item.avatar}`} />
+                    <AvatarImage src={item.avatar} alt="" />
                     <AvatarFallback> {item.title.charAt(0)}</AvatarFallback>
                   </Avatar>
                 </div>
@@ -58,10 +58,10 @@ const Notifications = () => {
                   </div>
                   {item.type === "confirm" && (
                     <div className="flex items-center gap-2">
-                      <Button size="sm" variant="outline">
+                      <Button size="xs" variant="outline">
                         Accept
                       </Button>
-                      <Button size="sm" variant="destructive">
+                      <Button size="xs" variant="destructive">
                         Decline
                       </Button>
                     </div>

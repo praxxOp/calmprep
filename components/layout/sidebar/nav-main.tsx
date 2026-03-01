@@ -54,7 +54,8 @@ import {
   SpeechIcon,
   MessageSquareHeartIcon,
   BookAIcon,
-  PuzzleIcon
+  PuzzleIcon,
+  BellIcon
 } from "lucide-react";
 import Link from "next/link";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -225,7 +226,7 @@ export const navItems: NavGroup[] = [
         icon: UsersIcon
       },
       {
-        title: "Profile",
+        title: "Profile V1",
         href: "/dashboard/pages/profile",
         icon: UserIcon
       },
@@ -246,7 +247,8 @@ export const navItems: NavGroup[] = [
         items: [
           { title: "Empty States 01", href: "/dashboard/pages/empty-states/01" },
           { title: "Empty States 02", href: "/dashboard/pages/empty-states/02" },
-          { title: "Empty States 03", href: "/dashboard/pages/empty-states/03" }
+          { title: "Empty States 03", href: "/dashboard/pages/empty-states/03" },
+          { title: "Empty States 04", href: "/dashboard/pages/empty-states/04" }
         ]
       },
       {
@@ -283,6 +285,11 @@ export const navItems: NavGroup[] = [
           { title: "Register v2", href: "/dashboard/register/v2" },
           { title: "Forgot Password", href: "/dashboard/forgot-password" }
         ]
+      },
+      {
+        title: "Notifications Page",
+        href: "/dashboard/pages/notifications",
+        icon: BellIcon
       },
       {
         title: "Error Pages",
@@ -328,7 +335,13 @@ export const navItems: NavGroup[] = [
         newTab: true
       },
       {
-        title: "Templates",
+        title: "Examples",
+        href: "/examples",
+        icon: ComponentIcon,
+        newTab: true
+      },
+      {
+        title: "WebsiteTemplates",
         href: "/templates",
         icon: ProportionsIcon,
         newTab: true

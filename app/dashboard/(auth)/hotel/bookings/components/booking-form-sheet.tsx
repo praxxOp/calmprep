@@ -32,9 +32,9 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/components/ui/select";
-import { toast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { timeSlots, rooms, statuses } from "../data";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z
@@ -86,8 +86,7 @@ export function BookingFormSheet() {
   });
 
   function handleFormSubmit(values: FormValues) {
-    toast({
-      title: "Booking created",
+    toast.success("Booking created", {
       description: `Booking for ${values.name} has been successfully added.`
     });
   }

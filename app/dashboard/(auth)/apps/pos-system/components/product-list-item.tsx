@@ -5,14 +5,13 @@ import Image from "next/image";
 import { ShoppingCartIcon } from "lucide-react";
 
 import { Product, useStore } from "@/app/dashboard/(auth)/apps/pos-system/store";
-import { useToast } from "@/hooks/use-toast";
 
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { toast } from "sonner";
 
 export default function ProductListItem({ product }: { product: Product }) {
   const { addToCart } = useStore();
-  const { toast } = useToast();
 
   const [productQuantities, setProductQuantities] = React.useState<Record<string, number>>({});
 
@@ -29,9 +28,7 @@ export default function ProductListItem({ product }: { product: Product }) {
       ...prev,
       [product.id]: 1
     }));
-    toast({
-      description: "Product added to cart."
-    });
+    toast.success("Product added to cart.");
   };
 
   return (

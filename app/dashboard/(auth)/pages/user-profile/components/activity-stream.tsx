@@ -1,6 +1,13 @@
-import { Clock12Icon, FileSpreadsheet, FileText, MoreHorizontal } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Clock12Icon, FileText, Filter, MoreHorizontal, Settings, Download } from "lucide-react";
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
 import {
   Card,
   CardAction,
@@ -19,7 +26,6 @@ import {
   TimelineSeparator,
   TimelineTitle
 } from "@/components/ui/timeline";
-import Link from "next/link";
 
 const activities = [
   {
@@ -71,9 +77,27 @@ export function ActivityStream() {
       <CardHeader>
         <CardTitle>Activity stream</CardTitle>
         <CardAction>
-          <Button variant="ghost" size="icon-sm">
-            <MoreHorizontal />
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon-sm">
+                <MoreHorizontal />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>
+                <Filter />
+                Filter by type
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Download />
+                Export activity
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Settings />
+                Notification settings
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </CardAction>
       </CardHeader>
       <CardContent>
@@ -125,7 +149,7 @@ export function ActivityStream() {
         </Timeline>
       </CardContent>
       <CardFooter className="border-t p-0!">
-        <Button variant="ghost" className="w-full rounded-none">
+        <Button variant="link" className="w-full rounded-none">
           View more
         </Button>
       </CardFooter>

@@ -8,19 +8,13 @@ export function SidebarModeSelector() {
   const { toggleSidebar } = useSidebar();
 
   return (
-    <div className="hidden flex-col gap-4 lg:flex">
+    <div className="hidden flex-col gap-3 lg:flex">
       <Label>Sidebar mode:</Label>
-      <ToggleGroup
-        type="single"
-        onValueChange={() => toggleSidebar()}
-        className="*:border-input w-full gap-4 *:rounded-md *:border">
-        <ToggleGroupItem variant="outline" value="full">
+      <ToggleGroup className="w-full" type="single" onValueChange={() => toggleSidebar()}>
+        <ToggleGroupItem variant="outline" className="grow" value="full">
           Default
         </ToggleGroupItem>
-        <ToggleGroupItem
-          variant="outline"
-          value="centered"
-          className="data-[variant=outline]:border-l-1">
+        <ToggleGroupItem variant="outline" className="grow" value="centered">
           Icon
         </ToggleGroupItem>
       </ToggleGroup>

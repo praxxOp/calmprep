@@ -29,7 +29,7 @@ export function ThemeCustomizerPanel() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="me-4 w-72 p-4 shadow-xl lg:me-0"
+        className="me-4 w-80 p-4 shadow-xl lg:me-0"
         align={isMobile ? "center" : "end"}>
         <div className="grid space-y-4">
           <PresetSelector />

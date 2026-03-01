@@ -19,7 +19,7 @@ export function PresetSelector() {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-3">
       <Label>Theme preset:</Label>
       <Select value={theme.preset} onValueChange={(value) => handlePreset(value)}>
         <SelectTrigger className="w-full">

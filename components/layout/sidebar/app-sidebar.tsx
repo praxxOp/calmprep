@@ -53,7 +53,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuButton className="hover:text-foreground h-10 group-data-[collapsible=icon]:px-0! hover:bg-[var(--primary)]/5">
+                <SidebarMenuButton className="hover:text-foreground h-10 group-data-[collapsible=icon]:px-0!">
                   <Logo />
                   <span className="text-foreground font-semibold">Shadcn UI Kit</span>
                   <ChevronsUpDown className="ml-auto group-data-[collapsible=icon]:hidden" />
@@ -85,7 +85,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   </div>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <Button className="w-full">
+                <Button size="sm" className="w-full">
                   <PlusIcon />
                   New Project
                 </Button>
@@ -102,15 +102,17 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <Card className="gap-4 overflow-hidden py-4 group-data-[collapsible=icon]:hidden">
           <CardHeader className="px-3">
-            <CardTitle>Download</CardTitle>
+            <CardTitle>Unlock Everything</CardTitle>
             <CardDescription>
-              Unlock lifetime access to all dashboards, templates and components.
+              Get instant access to all premium dashboards, templates, and UI components. Pay once,
+              use forever in unlimited projects.
             </CardDescription>
           </CardHeader>
           <CardContent className="px-3">
             <Button className="w-full" asChild>
               <Link href="https://shadcnuikit.com/pricing" target="_blank">
-                Get Shadcn UI Kit
+                <span className="size-2 shrink-0 rounded-full bg-green-500"></span>
+                Get Full Access
               </Link>
             </Button>
           </CardContent>

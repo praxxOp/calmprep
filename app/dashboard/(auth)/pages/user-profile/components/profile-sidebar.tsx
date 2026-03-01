@@ -16,33 +16,28 @@ export function ProfileSidebar() {
         </CardHeader>
         <CardContent>
           <div className="flex items-center gap-3">
-            <Progress value={profileCompletion} className="flex-1" />
+            <Progress value={profileCompletion} className="flex-1" indicatorColor="bg-green-500" />
             <span className="text-muted-foreground text-xs">{profileCompletion}%</span>
           </div>
         </CardContent>
       </Card>
 
-      <div className="space-y-6">
-        <div>
-          <h3 className="font-semibold">Profile</h3>
-        </div>
+      <div className="space-y-4">
+        <h3 className="font-semibold">About</h3>
 
-        <div className="space-y-4 lg:space-y-8">
-          <div>
-            <p className="text-muted-foreground mb-3 text-xs font-medium uppercase">About</p>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-sm">
-                <Users className="text-muted-foreground h-4 w-4" />
-                <span>{user.name}</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
-                <Briefcase className="text-muted-foreground h-4 w-4" />
-                <span>{user.department}</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm">
-                <TrendingUp className="text-muted-foreground h-4 w-4" />
-                <span>{user.role}</span>
-              </div>
+        <div className="space-y-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-1 lg:space-y-8">
+          <div className="space-y-3">
+            <div className="flex items-center gap-3 text-sm">
+              <Users className="text-muted-foreground h-4 w-4" />
+              <span>{user.name}</span>
+            </div>
+            <div className="flex items-center gap-3 text-sm">
+              <Briefcase className="text-muted-foreground h-4 w-4" />
+              <span>{user.department}</span>
+            </div>
+            <div className="flex items-center gap-3 text-sm">
+              <TrendingUp className="text-muted-foreground h-4 w-4" />
+              <span>{user.role}</span>
             </div>
           </div>
 

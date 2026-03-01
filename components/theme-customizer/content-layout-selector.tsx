@@ -8,20 +8,17 @@ export function ContentLayoutSelector() {
   const { theme, setTheme } = useThemeConfig();
 
   return (
-    <div className="hidden flex-col gap-4 lg:flex">
+    <div className="hidden flex-col gap-3 lg:flex">
       <Label>Content layout</Label>
       <ToggleGroup
+        className="w-full"
         value={theme.contentLayout}
         type="single"
-        onValueChange={(value) => setTheme({ ...theme, contentLayout: value as any })}
-        className="*:border-input w-full gap-4 *:rounded-md *:border">
-        <ToggleGroupItem variant="outline" value="full">
+        onValueChange={(value) => setTheme({ ...theme, contentLayout: value as any })}>
+        <ToggleGroupItem variant="outline" className="grow" value="full">
           Full
         </ToggleGroupItem>
-        <ToggleGroupItem
-          variant="outline"
-          value="centered"
-          className="data-[variant=outline]:border-l-1">
+        <ToggleGroupItem variant="outline" className="grow" value="centered">
           Centered
         </ToggleGroupItem>
       </ToggleGroup>

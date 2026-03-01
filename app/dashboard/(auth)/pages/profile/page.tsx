@@ -1,19 +1,20 @@
 import Link from "next/link";
 import { Settings } from "lucide-react";
-import { CompleteYourProfileCard } from "./complete-your-profile";
+import { CompleteYourProfileCard } from "./components/complete-your-profile";
 import { generateMeta } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CardSkills } from "@/app/dashboard/(auth)/pages/profile/card-skills";
-import { LatestActivity } from "@/app/dashboard/(auth)/pages/profile/latest-activity";
-import { AboutMe } from "@/app/dashboard/(auth)/pages/profile/about-me";
-import { Connections } from "@/app/dashboard/(auth)/pages/profile/connections";
-import { ProfileCard } from "@/app/dashboard/(auth)/pages/profile/profile-card";
+
+import { CardSkills } from "./components/card-skills";
+import { LatestActivity } from "./components/latest-activity";
+import { AboutMe } from "./components/about-me";
+import { Connections } from "./components/connections";
+import { ProfileCard } from "./components/profile-card";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Profile Page",
+    title: "Shadcn Profile Page",
     description:
       "You can use the profile page template to show user details. Built with shadcn/ui components.",
     canonical: "/pages/profile"

@@ -67,7 +67,7 @@ export default function TopTreatment() {
         <CardContent className="space-y-6">
           <div className="space-y-4">
             <div className="flex items-baseline gap-2">
-              <span className="font-display text-3xl">{totalPatients.toLocaleString()}</span>
+              <span className="font-display text-3xl">{totalPatients}</span>
               <Badge className="flex items-center gap-0.5 border-green-600 bg-transparent font-medium text-green-600">
                 <ArrowUp className="size-4" />
                 {change}

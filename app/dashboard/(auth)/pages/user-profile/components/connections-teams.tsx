@@ -59,7 +59,7 @@ const teams = [
 
 export function ConnectionsTeams() {
   return (
-    <div className="grid gap-6 lg:grid-cols-2">
+    <div className="grid gap-4 lg:grid-cols-2">
       <Card className="overflow-hidden pb-0">
         <CardHeader>
           <CardTitle>Connections</CardTitle>
