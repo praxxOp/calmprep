@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { HeartIcon, PlusIcon } from "lucide-react";
 
@@ -88,7 +88,7 @@ export function SocialMediaStories() {
             <DialogTitle></DialogTitle>
           </DialogHeader>
         </VisuallyHidden>
-        <DialogContent showCloseIcon={false} className="overflow-hidden border-0 p-0">
+        <DialogContent showCloseButton={false} className="overflow-hidden border-0 p-0">
           <Reel data={orderedReels}>
             <ReelProgress />
             <ReelContent>

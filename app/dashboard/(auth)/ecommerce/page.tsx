@@ -1,23 +1,18 @@
 import { generateMeta } from "@/lib/utils";
+import { Download } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-import {
-  EcommerceBestSellingProductsCard,
-  EcommerceCustomerReviewsCard,
-  EcommerceNewCustomersCard,
-  EcommerceRecentOrdersCard,
-  EcommerceReturnRateCard,
-  EcommerceRevenueCard,
-  EcommerceSalesByLocationCard,
-  EcommerceSalesCard,
-  EcommerceTotalRevenueCard,
-  EcommerceVisitBySourceCard,
-  EcommerceWelcomeCard
-} from "@/app/dashboard/(auth)/ecommerce/components";
 import CustomDateRangePicker from "@/components/custom-date-range-picker";
-import { Download } from "lucide-react";
-import StatCards from "@/app/dashboard/(auth)/ecommerce/components/stat-cards";
+import { EcommerceWelcomeCard } from "./components/welcome";
+import StatCards from "./components/stat-cards";
+import { EcommerceTotalRevenueCard } from "./components/total-revenue";
+import { EcommerceReturnRateCard } from "./components/return-rate";
+import { EcommerceSalesByLocationCard } from "./components/sales-by-location";
+import { EcommerceVisitBySourceCard } from "./components/visit-by-source";
+import { EcommerceCustomerReviewsCard } from "./components/customer-reviews";
+import { EcommerceRecentOrdersCard } from "./components/recent-orders";
+import { EcommerceBestSellingProductsCard } from "./components/best-selling-products";
 
 export async function generateMetadata() {
   return generateMeta({

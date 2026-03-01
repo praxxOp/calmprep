@@ -2,7 +2,6 @@ import { generateMeta } from "@/lib/utils";
 import { Download } from "lucide-react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CustomDateRangePicker from "@/components/custom-date-range-picker";
 import { Button } from "@/components/ui/button";
 
 import PatientVisitsChart from "./components/patient-visits-chart";
@@ -13,10 +12,12 @@ import Notes from "./components/notes";
 import HospitalReports from "./components/reports";
 import PlannedCalendar from "./components/planned-calendar";
 import SummaryCards from "./components/summary-cards";
+import TopTreatment from "./components/top-treatment";
+import CustomDateRangePicker from "@/components/custom-date-range-picker";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Hospital Admin Management",
+    title: "Hospital Management Dashboard",
     description:
       "The hospital admin dashboard is a template for managing and analyzing hospital data and monitoring operational processes.",
     canonical: "/hospital-management"
@@ -50,13 +51,14 @@ export default function Page() {
             <PatientVisitsChart />
             <PatientsByDepartmentChart />
           </div>
+          <div className="gap-4 space-y-4 lg:grid lg:space-y-0 xl:grid-cols-3">
+            <PlannedCalendar />
+            <Notes />
+            <TopTreatment />
+          </div>
           <div className="gap-4 space-y-4 md:grid-cols-2 lg:grid lg:grid-cols-7 lg:space-y-0">
             <UpcomingAppointments />
             <PatientsWithLastProcedure />
-          </div>
-          <div className="gap-4 space-y-4 md:grid-cols-2 lg:grid lg:grid-cols-2 lg:space-y-0">
-            <PlannedCalendar />
-            <Notes />
           </div>
         </TabsContent>
         <TabsContent value="reports" className="space-y-4">

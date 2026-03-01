@@ -1,8 +1,8 @@
-import { cookies } from "next/headers";
 import { generateMeta } from "@/lib/utils";
 
 import { Mail } from "./components/mail";
-import { accounts, mails } from "./data";
+import { mails } from "./data";
+import { cookies } from "next/headers";
 
 export async function generateMetadata() {
   return generateMeta({
@@ -14,21 +14,17 @@ export async function generateMetadata() {
 }
 
 export default async function MailPage() {
-  const layout = (await cookies()).get("react-resizable-panels:layout:mail");
-  const collapsed = (await cookies()).get("react-resizable-panels:collapsed");
+  const cookieID = "react-resizable-panels:layout:mail-app"
+  const collapsedCookieID = "react-resizable-panels:collapsed"
 
+  const layout = (await cookies()).get(cookieID);
   const defaultLayout = layout ? JSON.parse(layout.value) : undefined;
+  const collapsed = (await cookies()).get(collapsedCookieID);
   const defaultCollapsed = collapsed ? JSON.parse(collapsed.value) : undefined;
 
   return (
-    <div className="h-[calc(100vh-var(--header-height)-3rem)] rounded-md border">
-      <Mail
-        accounts={accounts}
-        mails={mails}
-        defaultLayout={defaultLayout}
-        defaultCollapsed={defaultCollapsed}
-        navCollapsedSize={4}
-      />
+    <div className="h-(--content-full-height) rounded-md border">
+      <Mail mails={mails} defaultLayout={defaultLayout} cookieID={cookieID} defaultCollapsed={defaultCollapsed} collapsedCookieID={collapsedCookieID} />
     </div>
   );
 }

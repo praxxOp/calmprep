@@ -3,39 +3,42 @@
 import * as React from "react";
 import { Search } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { cn } from "@/lib/utils";
+import { type Layout } from "react-resizable-panels";
+import { useMailStore } from "../use-mail";
 
-import { Input } from "@/components/ui/input";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TooltipProvider } from "@/components/ui/tooltip";
+
 import { MailDisplay } from "./mail-display";
 import { MailList } from "./mail-list";
 import { type Mail } from "../data";
-import { useMailStore } from "../use-mail";
-import { NavDesktop } from "@/app/dashboard/(auth)/apps/mail/components/nav-desktop";
-import { NavMobile } from "@/app/dashboard/(auth)/apps/mail/components/nav-mobile";
-import { MailDisplayMobile } from "@/app/dashboard/(auth)/apps/mail/components/mail-display-mobile";
+import { NavDesktop } from "./nav-desktop";
+import { NavMobile } from "./nav-mobile";
+import { MailDisplayMobile } from "./mail-display-mobile";
+import { cn } from "@/lib/utils";
 
-interface MailProps {
-  accounts: {
-    label: string;
-    email: string;
-    icon: React.ReactNode;
-  }[];
-  mails: Mail[];
-  defaultLayout: number[] | undefined;
-  defaultCollapsed?: boolean;
-  navCollapsedSize: number;
-}
+const DEFAULT_LAYOUT: Layout = {
+  "left-panel": 16,
+  "middle-panel": 30,
+  "right-panel": 54
+};
 
 export function Mail({
   mails,
-  defaultLayout = [20, 32, 48],
-  defaultCollapsed = false,
-  navCollapsedSize
-}: MailProps) {
+  defaultLayout = DEFAULT_LAYOUT,
+  cookieID,
+  defaultCollapsed,
+  collapsedCookieID
+}: {
+  mails: Mail[];
+  defaultLayout?: Layout;
+  cookieID: string;
+  defaultCollapsed: boolean;
+  collapsedCookieID: string;
+}) {
   const [isCollapsed, setIsCollapsed] = React.useState(defaultCollapsed);
   const isMobile = useIsMobile();
   const { selectedMail } = useMailStore();
@@ -44,31 +47,34 @@ export function Mail({
   return (
     <TooltipProvider delayDuration={0}>
       <ResizablePanelGroup
-        direction="horizontal"
-        onLayout={(sizes: number[]) => {
-          document.cookie = `react-resizable-panels:layout:mail=${JSON.stringify(sizes)}`;
+        orientation="horizontal"
+        defaultLayout={defaultLayout}
+        id={cookieID}
+        onLayoutChange={(layout) => {
+          document.cookie = `${cookieID}=${JSON.stringify(layout)}; path=/;`;
         }}
         className="items-stretch">
         <ResizablePanel
+          id="left-panel"
           hidden={isMobile}
-          defaultSize={defaultLayout[0]}
-          collapsedSize={navCollapsedSize}
+          collapsedSize={`4%`}
           collapsible={true}
-          minSize={15}
-          maxSize={20}
-          onCollapse={() => {
-            setIsCollapsed(true);
-            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(true)}`;
+          minSize="15%"
+          maxSize="20%"
+          onResize={(panelSize) => {
+            if (panelSize.asPercentage < 14) {
+              setIsCollapsed(true);
+              document.cookie = `${collapsedCookieID}=${JSON.stringify(true)}`;
+            } else {
+              setIsCollapsed(false);
+              document.cookie = `${collapsedCookieID}=${JSON.stringify(false)}`;
+            }
           }}
-          onResize={() => {
-            setIsCollapsed(false);
-            document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(false)}`;
-          }}
-          className={cn(isCollapsed && "min-w-[50px] transition-all duration-300 ease-in-out")}>
+          className={cn(isCollapsed && "max-w-[50px] transition-all duration-1000 ease-in-out")}>
           <NavDesktop isCollapsed={isCollapsed} />
         </ResizablePanel>
         <ResizableHandle hidden={isMobile} withHandle />
-        <ResizablePanel defaultSize={defaultLayout[1]} minSize={30}>
+        <ResizablePanel id="middle-panel" minSize="20%">
           <Tabs
             defaultValue="all"
             className="flex h-full flex-col gap-0"
@@ -84,12 +90,14 @@ export function Mail({
               </TabsList>
             </div>
             <Separator />
-            <div className="bg-background/95 supports-[backdrop-filter]:bg-background/60 p-4 backdrop-blur">
+            <div className="bg-background/59 p-4 backdrop-blur-md">
               <form>
-                <div className="relative">
-                  <Search className="text-muted-foreground absolute top-2.5 left-2 h-4 w-4" />
-                  <Input placeholder="Search" className="pl-8" />
-                </div>
+                <InputGroup>
+                  <InputGroupAddon>
+                    <Search />
+                  </InputGroupAddon>
+                  <InputGroupInput placeholder="Search" />
+                </InputGroup>
               </form>
             </div>
             <div className="min-h-0">
@@ -102,7 +110,7 @@ export function Mail({
           </Tabs>
         </ResizablePanel>
         <ResizableHandle hidden={isMobile} withHandle />
-        <ResizablePanel defaultSize={defaultLayout[2]} hidden={isMobile} minSize={30}>
+        <ResizablePanel id="right-panel" hidden={isMobile} minSize="30%">
           {isMobile ? (
             <MailDisplayMobile mail={mails.find((item) => item.id === selectedMail?.id) || null} />
           ) : (

@@ -15,7 +15,6 @@ import {
 
 import { Nav } from "./nav";
 import { Separator } from "@/components/ui/separator";
-import * as React from "react";
 import { cn } from "@/lib/utils";
 import { AccountSwitcher } from "./account-switcher";
 import { accounts } from "../data";
@@ -88,35 +87,35 @@ export function NavDesktop({ isCollapsed }: NavDesktopProps) {
             title: "Social",
             label: "972",
             icon: Users2,
-            dot: <span className="me-2 size-3.5 rounded-full bg-indigo-400 dark:bg-indigo-700" />,
+            dot: <span className="size-3 rounded-full bg-indigo-400 dark:bg-indigo-700" />,
             variant: "ghost"
           },
           {
             title: "Updates",
             label: "342",
             icon: AlertCircle,
-            dot: <span className="me-2 size-3.5 rounded-full bg-teal-400 dark:bg-teal-700" />,
+            dot: <span className="size-3 rounded-full bg-teal-400 dark:bg-teal-700" />,
             variant: "ghost"
           },
           {
             title: "Forums",
             label: "128",
             icon: MessagesSquare,
-            dot: <span className="me-2 size-3.5 rounded-full bg-orange-400 dark:bg-orange-700" />,
+            dot: <span className="size-3 rounded-full bg-orange-400 dark:bg-orange-700" />,
             variant: "ghost"
           },
           {
             title: "Shopping",
             label: "8",
             icon: ShoppingCart,
-            dot: <span className="me-2 size-3.5 rounded-full bg-lime-400 dark:bg-lime-700" />,
+            dot: <span className="size-3 rounded-full bg-lime-400 dark:bg-lime-700" />,
             variant: "ghost"
           },
           {
             title: "Promotions",
             label: "21",
             icon: Archive,
-            dot: <span className="me-2 size-3.5 rounded-full bg-pink-400 dark:bg-pink-700" />,
+            dot: <span className="size-3 rounded-full bg-pink-400 dark:bg-pink-700" />,
             variant: "ghost"
           }
         ]}

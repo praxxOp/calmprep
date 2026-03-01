@@ -7,7 +7,7 @@ export function TotalDeals() {
       <CardHeader>
         <CardDescription>Total Deals</CardDescription>
         <div className="flex flex-col gap-2">
-          <h4 className="font-display text-2xl lg:text-3xl">1,02,890</h4>
+          <h4 className="font-display text-2xl lg:text-3xl">1,300</h4>
           <div className="text-muted-foreground text-sm">
             <span className="text-red-600">-0.8%</span> from last month
           </div>

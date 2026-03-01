@@ -11,13 +11,12 @@ import {
   SubscriptionsCard,
   TeamMembersCard,
   TotalRevenueCard
-} from "@/app/dashboard/(auth)/default/components";
+} from "./components";
 import { Download } from "lucide-react";
-import { toast } from "sonner";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Admin Dashboard",
+    title: "Shadcn Admin Dashboard",
     description:
       "The admin dashboard template offers a sleek and efficient interface for monitoring important data and user interactions. Built with shadcn/ui.",
     canonical: "/default"

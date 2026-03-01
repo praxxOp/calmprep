@@ -2,12 +2,17 @@
 
 import * as React from "react";
 import { format } from "date-fns";
-import { Clock, PlusCircle } from "lucide-react";
+import { Clock, PlusCircle, Trash2 } from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput
+} from "@/components/ui/input-group";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 interface Note {
   id: number;
@@ -23,8 +28,7 @@ export default function Notes() {
     { id: 4, date: new Date(2025, 1, 16), text: "Inventory check" },
     { id: 5, date: new Date(2025, 2, 15), text: "Staff meeting at 2 PM" },
     { id: 6, date: new Date(2025, 3, 15), text: "Staff meeting at 2 PM" },
-    { id: 7, date: new Date(2025, 5, 20), text: "Annual health checkup" },
-    { id: 8, date: new Date(2025, 6, 25), text: "Dental examination at 3 PM" }
+    { id: 7, date: new Date(2025, 5, 20), text: "Annual health checkup" }
   ]);
   const [newNote, setNewNote] = React.useState("");
 
@@ -48,28 +52,41 @@ export default function Notes() {
       <CardContent>
         <div className="divide-y">
           {notes.map((note, key) => (
-            <Link href="#" key={key} className="flex items-center justify-between py-3 text-sm">
+            <Link
+              href="#"
+              key={key}
+              className="group flex h-12 justify-between py-3 text-sm hover:opacity-70">
               <span>{note.text}</span>
-              <span className="text-muted-foreground flex items-center">
-                <Clock className="me-2 size-4" /> {format(note.date, "MMM d, yyyy")}
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="text-muted-foreground flex items-center gap-1.5 text-xs lg:group-hover:hidden">
+                  <Clock className="size-3" /> {format(note.date, "MMM d, yyyy")}
+                </span>
+                <Button
+                  variant="outline"
+                  size="icon-xs"
+                  className="lg:hidden group-hover:inline-flex">
+                  <Trash2 />
+                </Button>
+              </div>
             </Link>
           ))}
         </div>
       </CardContent>
       <CardFooter>
-        <div className="relative flex w-full space-x-4">
-          <Input
+        <InputGroup>
+          <InputGroupInput
             placeholder="Add a new note"
             value={newNote}
             onChange={(e) => setNewNote(e.target.value)}
-            onKeyPress={(e) => e.key === "Enter" && addNote()}
+            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => e.key === "Enter" && addNote()}
           />
-          <Button onClick={addNote}>
-            <PlusCircle />
-            Add Note
-          </Button>
-        </div>
+          <InputGroupAddon align="inline-end">
+            <InputGroupButton variant="secondary" onClick={addNote}>
+              <PlusCircle />
+              Add
+            </InputGroupButton>
+          </InputGroupAddon>
+        </InputGroup>
       </CardFooter>
     </Card>
   );

@@ -7,6 +7,7 @@ import { ReactNode } from "react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Badge } from "@/components/ui/badge";
 
 interface NavProps {
   isCollapsed: boolean;
@@ -33,7 +34,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
                   href="#"
                   className={cn(
                     buttonVariants({ variant: link.variant, size: "icon" }),
-                    "h-9 w-9",
+                    "size-9",
                     link.variant === "default" &&
                       "dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white"
                   )}>
@@ -54,18 +55,16 @@ export function Nav({ links, isCollapsed }: NavProps) {
                 buttonVariants({ variant: link.variant, size: "sm" }),
                 link.variant === "default" &&
                   "dark:bg-muted dark:hover:bg-muted dark:text-white dark:hover:text-white",
-                "justify-start"
+                "flex justify-start gap-3"
               )}>
-              {link.dot ?? <link.icon className="mr-2 h-4 w-4" />}
+              {link.dot ?? <link.icon className="size-4" />}
               {link.title}
               {link.label && (
-                <span
-                  className={cn(
-                    "ml-auto",
-                    link.variant === "default" && "text-background dark:text-white"
-                  )}>
+                <Badge
+                  variant={link.variant === "default" ? "default" : "outline"}
+                  className="ml-auto">
                   {link.label}
-                </span>
+                </Badge>
               )}
             </Link>
           )
