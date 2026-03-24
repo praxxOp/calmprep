@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "bundui-images.netlify.app"
+        hostname: "**"
       }
     ]
   }
