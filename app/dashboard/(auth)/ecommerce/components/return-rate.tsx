@@ -7,7 +7,14 @@ import {
   ChartTooltip,
   ChartTooltipContent
 } from "@/components/ui/chart";
-import { ExportButton } from "@/components/CardActionMenus";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { FolderUp } from "lucide-react";
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 import { Badge } from "@/components/ui/badge";
 
@@ -43,7 +50,17 @@ export function EcommerceReturnRateCard() {
       <CardHeader>
         <CardDescription className="relative">Returning Rate</CardDescription>
         <CardAction className="relative">
-          <ExportButton className="absolute end-0 top-0" />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">
+                <FolderUp /> <span className="hidden lg:inline">Export</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>Excel</DropdownMenuItem>
+              <DropdownMenuItem>PDF</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </CardAction>
         <div className="flex items-center gap-2">
           <div className="font-display text-2xl">$42,379</div>
@@ -53,7 +70,7 @@ export function EcommerceReturnRateCard() {
         </div>
       </CardHeader>
       <CardContent>
-        <ChartContainer className="mt-0 !aspect-21/9 w-full md:mt-6" config={chartConfig}>
+        <ChartContainer className="mt-0 aspect-21/9! w-full md:mt-6" config={chartConfig}>
           <LineChart
             accessibilityLayer
             data={chartData}

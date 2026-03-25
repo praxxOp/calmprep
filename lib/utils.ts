@@ -15,15 +15,17 @@ export function generateAvatarFallback(string: string) {
 
 export function generateMeta({
   title,
+  additionalTitle = false,
   description,
   canonical
 }: {
   title: string;
+  additionalTitle?: boolean;
   description: string;
   canonical: string;
 }): Metadata {
   return {
-    title: `${title} - Shadcnuikit.com`,
+    title: `${title} for Shadcn UI${additionalTitle ? " – Admin Dashboard Template" : ""}`,
     description: description,
     metadataBase: new URL(`https://shadcnuikit.com`),
     alternates: {

@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Real Estate Admin Dashboard",
     description:
-      "A professional Real Estate Admin Dashboard Template built with React, TypeScript, and shadcn/ui, featuring type-safe property management grids, dynamic filtering, and seamless data visualization. These Tailwind CSS layouts are designed to streamline real estate workflows, providing a professional and responsive administrative interface for managing high-volume property inventories.",
+      "Manage property listings, sales analytics, and lead tracking. A professional real estate admin page built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/real-estate"
   });
 }
@@ -111,9 +111,9 @@ export default function Page() {
         <ReminderCard items={dashboardData.reminders} />
       </div>
 
-      <div className="grid xl:grid-cols-4 gap-4">
+      <div className="grid gap-4 xl:grid-cols-4">
         <LeadsContact items={dashboardData.leads} />
-        <div className="xl:col-span-2 h-full">
+        <div className="h-full xl:col-span-2">
           <SalesAnalyticsCard />
         </div>
         <PropertyOverviewCard />

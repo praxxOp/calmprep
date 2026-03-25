@@ -2,13 +2,14 @@ import { generateMeta } from "@/lib/utils";
 import { promises as fs } from "fs";
 import path from "path";
 
-import PosSystemMenu from "@/app/dashboard/(auth)/apps/pos-system/pos-system-menu";
+import PosSystemMenu from "./components/pos-system-menu";
 
 export async function generateMetadata() {
   return generateMeta({
     title: "POS System App",
+    additionalTitle: true,
     description:
-      "Product and order management application template for restaurants or online businesses. Built with shadcn/ui, Next.js and Tailwind CSS.",
+      "Manage table reservations, product orders, and checkout processes with a real-time status tracker and integrated payment options. A professional POS system application built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/pos-system-app"
   });
 }

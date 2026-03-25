@@ -1,14 +1,17 @@
+"use client";
+
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { FileSearchIcon, LayoutGridIcon, ListIcon, MenuIcon, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { AddNoteModal } from "@/app/dashboard/(auth)/apps/notes/add-note-modal";
-import { Note } from "@/app/dashboard/(auth)/apps/notes/types";
-import NoteListItem from "@/app/dashboard/(auth)/apps/notes/note-list-item";
-import { notes } from "@/app/dashboard/(auth)/apps/notes/data";
-import { NoteMobileSidebar } from "@/app/dashboard/(auth)/apps/notes/note-sidebar";
+import { AddNoteModal } from "./add-note-modal";
+import NoteListItem from "./note-list-item";
+import { NoteMobileSidebar } from "./note-sidebar";
+
+import { notes } from "../data";
+import { Note } from "../types";
 
 export default function NoteContent() {
   const [searchQuery, setSearchQuery] = useState("");

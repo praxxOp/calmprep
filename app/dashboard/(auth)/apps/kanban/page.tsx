@@ -5,8 +5,9 @@ import KanbanBoard from "./components/kanban-board";
 export async function generateMetadata() {
   return generateMeta({
     title: "Kanban Board",
+    additionalTitle: true,
     description:
-      "Create a layout where you can easily manage your projects and tasks with the Kanban template. Built with shadcn/ui, React, Next.js and Tailwind CSS.",
+      "Organize workflows, track task progress, and manage team assignments with a dynamic drag-and-drop board. A professional project management application built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/kanban"
   });
 }

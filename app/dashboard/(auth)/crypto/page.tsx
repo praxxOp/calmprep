@@ -11,9 +11,9 @@ import {
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Crypto Admin Dashboard",
+    title: "Crypto Admin Dashboard Template",
     description:
-      "The crypto admin dashboard is a template for effectively tracking cryptocurrency prices, market trends and portfolio performance. Built with shadcn/ui.",
+      "Manage crypto portfolios, digital wallets, and market trends. A professional admin dashboard page built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/crypto"
   });
 }

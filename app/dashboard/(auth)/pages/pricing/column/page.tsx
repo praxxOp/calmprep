@@ -101,7 +101,7 @@ export default function Page() {
     <div className="mx-auto max-w-(--breakpoint-lg) lg:py-16">
       <div className="mb-6 flex flex-col items-start justify-between space-y-2 lg:flex-row lg:items-center">
         <h1 className="text-2xl font-bold tracking-tight lg:text-3xl">Choose Your Plan</h1>
-        <div className="flex items-start justify-center space-x-4 lg:items-center">
+        <div className="flex items-start justify-center space-x-2 lg:items-center">
           <span className={`text-sm ${!isYearly ? "font-bold" : ""}`}>Monthly</span>
           <Switch
             checked={isYearly}
@@ -111,7 +111,7 @@ export default function Page() {
           <span className={`text-sm ${isYearly ? "font-bold" : ""}`}>Yearly</span>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {pricingTiers.map((tier, index) => (
           <Card key={index} className="relative flex flex-col">
             <CardHeader>

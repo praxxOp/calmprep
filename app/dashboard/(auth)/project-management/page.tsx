@@ -1,7 +1,14 @@
 import { generateMeta } from "@/lib/utils";
 
 import CalendarDateRangePicker from "@/components/custom-date-range-picker";
-import { ExportButton } from "@/components/CardActionMenus";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { FolderUp } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import {
@@ -13,13 +20,13 @@ import {
   Reminders,
   SuccessMetrics,
   Reports
-} from "@/app/dashboard/(auth)/project-management/components";
+} from "./components";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Project Admin Dashboard",
+    title: "Project Management Admin Dashboard",
     description:
-      "The project management admin dashboard template provides a powerful and intuitive interface for tracking tasks, deadlines, and team progress to ensure project success.",
+      "Track tasks, deadlines, and team efficiency with interactive charts. A professional dashboard page built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/project-management"
   });
 }
@@ -31,7 +38,17 @@ export default function Page() {
         <h1 className="text-2xl font-bold tracking-tight">Project Dashboard</h1>
         <div className="flex items-center space-x-2">
           <CalendarDateRangePicker />
-          <ExportButton />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">
+                <FolderUp /> <span className="hidden lg:inline">Export</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>Excel</DropdownMenuItem>
+              <DropdownMenuItem>PDF</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-import { ChevronRight, MoreVerticalIcon } from "lucide-react";
+import { ChevronRight, FolderUp, MoreVerticalIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,7 +16,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
-import { ExportButton } from "@/components/CardActionMenus";
 
 const appointments = [
   {
@@ -84,7 +83,17 @@ export default function UpcomingAppointments() {
         <CardTitle>Upcoming Appointments</CardTitle>
         <CardAction>
           <div className="flex gap-2">
-            <ExportButton />
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline">
+                  <FolderUp /> <span className="hidden lg:inline">Export</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem>Excel</DropdownMenuItem>
+                <DropdownMenuItem>PDF</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button variant="outline">
               <ChevronRight />
             </Button>

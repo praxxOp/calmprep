@@ -4,8 +4,9 @@ import AppRender from "@/app/dashboard/(auth)/apps/ai-chat/app-render";
 export async function generateMetadata() {
   return generateMeta({
     title: "AI Chat App",
+    additionalTitle: true,
     description:
-      "A template you can use to create applications that allow you to chat with artificial intelligence. Built with shadcn/ui, Next.js and Tailwind CSS.",
+      "Interact with AI-powered conversational interfaces using a modern, responsive chat interface. A professional AI chat application page built with React, TypeScript, Next.js, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/ai-chat"
   });
 }

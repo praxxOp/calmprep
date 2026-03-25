@@ -13,8 +13,9 @@ import { postsData } from "./data";
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Social Media App",
+    additionalTitle: true,
     description:
-      "Social media app is a ui template used to connect, share and interact with users online. Built with shadcn/ui, Tailwind CSS, Next.js and React.",
+      "Connect with users, share updates, and interact with social feeds using a modern multi-column layout featuring stories and interactive posts. A professional social media app built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/social-media"
   });
 }

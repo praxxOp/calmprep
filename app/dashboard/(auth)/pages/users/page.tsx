@@ -11,8 +11,9 @@ import UsersDataTable from "./data-table";
 export async function generateMetadata() {
   return generateMeta({
     title: "Users List",
+    additionalTitle: true,
     description:
-      "A list of users generated using the Tanstack Table. Built with Tailwind CSS, Shadcn UI and Next.js.",
+      "Manage user records and list data efficiently. A professional admin dashboard page built with React, TypeScript, Tailwind CSS, shadcn/ui, and Tanstack Table.",
     canonical: "/pages/users"
   });
 }

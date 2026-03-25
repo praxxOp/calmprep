@@ -1,7 +1,5 @@
-"use client";
-
-import NoteSidebar from "@/app/dashboard/(auth)/apps/notes/note-sidebar";
-import NoteContent from "@/app/dashboard/(auth)/apps/notes/note-content";
+import NoteSidebar from "./note-sidebar";
+import NoteContent from "./note-content";
 
 export default function NotesApp() {
   return (

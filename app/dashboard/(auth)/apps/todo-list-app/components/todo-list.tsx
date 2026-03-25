@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 
-import { FilterTab, Todo, TodoStatus } from "@/app/dashboard/(auth)/apps/todo-list-app/types";
+import { FilterTab, Todo, TodoStatus } from "../types";
 
 import { Button } from "@/components/ui/button";
 import { Plus, X, Search, SlidersHorizontal, GridIcon, ListIcon } from "lucide-react";
@@ -15,15 +15,12 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Toggle } from "@/components/ui/toggle";
-import TodoItem from "@/app/dashboard/(auth)/apps/todo-list-app/components/todo-item";
-import { useTodoStore } from "@/app/dashboard/(auth)/apps/todo-list-app/store";
-import StatusTabs from "@/app/dashboard/(auth)/apps/todo-list-app/components/status-tabs";
+import TodoItem from "./todo-item";
+import { useTodoStore } from "../store";
+import StatusTabs from "./status-tabs";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import {
-  priorityDotColors,
-  EnumTodoPriority
-} from "@/app/dashboard/(auth)/apps/todo-list-app/enum";
+import { priorityDotColors, EnumTodoPriority } from "../enum";
 import { toast } from "sonner";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import {

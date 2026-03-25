@@ -54,7 +54,7 @@ export async function generateMetadata() {
   return generateMeta({
     title: "Order Detail Page",
     description:
-      "View and track your order details quickly on this page built with shadcn/ui, Tailwind CSS, and Next.js. Access comprehensive order information at a glance.",
+      "Manage order details, customer data, and tracking. A professional admin dashboard page built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/pages/orders/detail"
   });
 }

@@ -12,8 +12,9 @@ import OrdersDataTable from "./data-table";
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Orders Page",
+    additionalTitle: true,
     description:
-      "A list of orders generated using the Tanstack Table. Built with Tailwind CSS, shadcn/ui and Next.js.",
+      "Orders Page for shadcn/ui built with React, Tailwind CSS, and TypeScript. Manage order history, status, and tracking using responsive data tables and filtering components.",
     canonical: "/pages/orders"
   });
 }

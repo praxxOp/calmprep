@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
-import { noteLabels } from "./data";
+import { noteLabels } from "../data";
 import { AddNoteModal } from "./add-note-modal";
 import { EditLabelsModal } from "./edit-labels-modal";
 
@@ -62,7 +62,7 @@ export function NoteSidebarContent() {
         <div className="text-muted-foreground px-2 text-sm font-medium">Labels</div>
         <nav>
           {noteLabels.map((label, key) => (
-            <Button key={key} variant="ghost" className="w-full h-8 justify-start font-normal">
+            <Button key={key} variant="ghost" className="h-8 w-full justify-start font-normal">
               <span className={`me-1 size-2 rounded-full ${label.color}`} />
               {label.title}
             </Button>

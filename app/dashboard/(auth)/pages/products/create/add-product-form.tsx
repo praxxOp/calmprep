@@ -108,12 +108,12 @@ export default function AddProductForm() {
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <div className="mb-4 flex flex-col justify-between space-y-4 lg:flex-row lg:items-center lg:space-y-2">
           <div className="flex items-center gap-4">
-            <Button variant="outline" asChild>
+            <Button variant="outline" size="sm" asChild>
               <Link href="/dashboard/pages/products">
                 <ChevronLeft />
               </Link>
             </Button>
-            <h1 className="text-2xl font-bold tracking-tight">Add Products</h1>
+            <h1 className="text-2xl font-bold">Add Products</h1>
           </div>
           <div className="flex gap-2">
             <Button type="button" variant="secondary">

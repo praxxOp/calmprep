@@ -7,7 +7,6 @@ import {
   CardHeader,
   CardTitle
 } from "@/components/ui/card";
-import { ExportButton } from "@/components/CardActionMenus";
 import { Button } from "@/components/ui/button";
 
 interface ReviewStat {
@@ -60,21 +59,18 @@ export function EcommerceCustomerReviewsCard() {
   return (
     <Card className="lg:col-span-12 xl:col-span-5">
       <CardHeader>
-        <CardTitle className="relative">Customer Reviews</CardTitle>
+        <CardTitle>Customer Reviews</CardTitle>
         <CardDescription>
           Based on {totalReviews.toLocaleString()} verified purchases
         </CardDescription>
-        <CardAction className="relative">
-          <div className="absolute end-0 top-0">
-            <Button size="sm" variant="outline">
-              <span className="hidden md:inline">View All</span> <ChevronRight />
-            </Button>
-          </div>
+        <CardAction>
+          <Button size="sm" variant="outline">
+            <span className="hidden md:inline">View All</span> <ChevronRight />
+          </Button>
         </CardAction>
       </CardHeader>
       <CardContent>
         <div className="grid space-y-4 lg:grid-cols-3 lg:space-y-0">
-          {/* Average rating display */}
           <div className="flex flex-col items-center justify-center gap-2 lg:col-span-1">
             <div className="flex items-center gap-1">
               {[1, 2, 3, 4].map((i) => (
@@ -90,7 +86,6 @@ export function EcommerceCustomerReviewsCard() {
             <div className="text-sm text-gray-500">out of 5</div>
           </div>
 
-          {/* Rating breakdown */}
           <div className="w-full space-y-3 lg:col-span-2">
             {reviewStatsWithPercentage.map((stat) => (
               <div key={stat.stars} className="flex items-center">
@@ -108,7 +103,6 @@ export function EcommerceCustomerReviewsCard() {
           </div>
         </div>
 
-        {/* Recent reviews */}
         <div className="mt-6">
           {recentReviews.map((review) => (
             <div key={review.id} className="bg-muted rounded-lg border p-4">

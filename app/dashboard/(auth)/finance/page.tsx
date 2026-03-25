@@ -14,9 +14,9 @@ import KPICards from "./components/kpi-cards";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Finance Admin Dashboard",
+    title: "Finance Admin Dashboard Template",
     description:
-      "A finance dashboard is an admin panel that visualizes key financial data such as income, expenses, cash flow, budget, and profit. Built with shadcn/ui, Tailwind CSS, Next.js.",
+      "Manage income, expenses, and savings goals with interactive charts. A professional finance admin page built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/finance"
   });
 }

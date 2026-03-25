@@ -6,12 +6,11 @@ import {
   CardHeader,
   CardTitle
 } from "@/components/ui/card";
-import { ExportButton } from "@/components/CardActionMenus";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 export function BestSellingProducts() {
   const products = [
@@ -71,16 +70,14 @@ export function BestSellingProducts() {
         <CardTitle>Best Selling Product</CardTitle>
         <CardDescription>Top-Selling Products at a Glance</CardDescription>
         <CardAction>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button size="icon" variant="outline">
-                  <ChevronRight />
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>View All</TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button size="icon" variant="outline">
+                <ChevronRight />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>View All</TooltipContent>
+          </Tooltip>
         </CardAction>
       </CardHeader>
       <CardContent className="space-y-4">

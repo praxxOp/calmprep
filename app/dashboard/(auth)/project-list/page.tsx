@@ -14,8 +14,9 @@ import Link from "next/link";
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Project List",
+    additionalTitle: true,
     description:
-      "A projects list is an organized overview of projects with key details and statuses. Built with shadcn/ui, Tailwind CSS, Next.js and React. Includes TypeScript.",
+      "Track project status, progress, and team assignments. A professional admin dashboard page built with React, TypeScript, Tailwind CSS, and shadcn/ui components.",
     canonical: "/project-list"
   });
 }

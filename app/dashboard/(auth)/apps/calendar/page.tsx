@@ -6,8 +6,9 @@ import EventCalendarApp from "./components/event-calendar-app";
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Event Calendar",
+    additionalTitle: true,
     description:
-      "Plan your events or tasks in an organized way with the Calendar app template. Built with shadcn/ui, Next.js, Tailwind CSS ve React.",
+      "Organize schedules, track deadlines, and manage events with interactive drag-and-drop functionality across month, week, and day views. A professional calendar app built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/calendar"
   });
 }

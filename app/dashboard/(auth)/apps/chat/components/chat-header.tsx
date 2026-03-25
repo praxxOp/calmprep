@@ -1,19 +1,14 @@
 "use client";
 
-import React from "react";
 import { ArrowLeft, Ellipsis } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { generateAvatarFallback } from "@/lib/utils";
-import useChatStore from "@/app/dashboard/(auth)/apps/chat/useChatStore";
+import useChatStore from "../useChatStore";
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import {
-  CallDialog,
-  ChatUserDropdown,
-  VideoCallDialog
-} from "@/app/dashboard/(auth)/apps/chat/components";
+import { CallDialog, ChatUserDropdown, VideoCallDialog } from "./index";
 import { Avatar, AvatarFallback, AvatarImage, AvatarIndicator } from "@/components/ui/avatar";
-import { UserPropsTypes } from "@/app/dashboard/(auth)/apps/chat/types";
+import { UserPropsTypes } from "../types";
 
 export function ChatHeader({ user }: { user: UserPropsTypes }) {
   const { setSelectedChat } = useChatStore();
@@ -28,7 +23,7 @@ export function ChatHeader({ user }: { user: UserPropsTypes }) {
           onClick={() => setSelectedChat(null)}>
           <ArrowLeft />
         </Button>
-        <Avatar className="overflow-visible lg:size-10">
+        <Avatar>
           <AvatarImage src={`${user?.avatar}`} alt="avatar image" />
           <AvatarIndicator variant={user?.online_status} />
           <AvatarFallback>{generateAvatarFallback(user?.name)}</AvatarFallback>

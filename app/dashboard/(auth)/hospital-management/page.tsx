@@ -17,9 +17,9 @@ import CustomDateRangePicker from "@/components/custom-date-range-picker";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Hospital Management Dashboard",
+    title: "Hospital Management Dashboard Template",
     description:
-      "The hospital admin dashboard is a template for managing and analyzing hospital data and monitoring operational processes.",
+      "Monitor patient visits, appointments, and hospital reports. A professional healthcare dashboard built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/hospital-management"
   });
 }

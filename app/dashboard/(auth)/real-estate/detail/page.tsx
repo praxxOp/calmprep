@@ -37,8 +37,9 @@ import data from "../data.json";
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Real Estate Detail",
+    additionalTitle: true,
     description:
-      "A professional real estate detail page for admin dashboard template built with React, TypeScript, and shadcn/ui, featuring type-safe property data visualization, comprehensive amenity lists, and integrated gallery management. These Tailwind CSS layouts are designed to provide a deep dive into individual listing analytics and information, ensuring a responsive and efficient administrative experience for your property management system.",
+      "View property details, photo galleries, and listing analytics. A professional real estate admin page built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/real-estate/detail"
   });
 }
@@ -57,7 +58,7 @@ export default function Page() {
   const [mainImage, ...subImages] = detail.gallery;
 
   return (
-    <div className="mx-auto max-w-6xl space-y-4 ">
+    <div className="mx-auto max-w-6xl space-y-4">
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-center gap-3">
           <Button variant="outline" size="icon">

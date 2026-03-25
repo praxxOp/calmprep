@@ -16,9 +16,9 @@ import { EcommerceBestSellingProductsCard } from "./components/best-selling-prod
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Ecommerce Admin Dashboard",
+    title: "Ecommerce Admin Dashboard Template",
     description:
-      "The e-commerce admin dashboard template is an admin template that you can use for your e-commerce website projects. Built with shadcn/ui, Tailwind CSS, Next.js.",
+      "The e-commerce admin dashboard template is an admin template that you can use for your e-commerce website projects. Built with shadcn/ui, Tailwind CSS, React, Next.js.",
     canonical: "/ecommerce"
   });
 }

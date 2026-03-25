@@ -10,7 +10,14 @@ import {
   ChartTooltip,
   ChartTooltipContent
 } from "@/components/ui/chart";
-import { ExportButton } from "@/components/CardActionMenus";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { FolderUp } from "lucide-react";
 
 const chartData = [
   { source: "social", leads: 275, fill: "var(--color-social)" },
@@ -50,7 +57,17 @@ export function LeadBySourceCard() {
       <CardHeader className="flex flex-row justify-between">
         <CardTitle>Leads by Source</CardTitle>
         <CardAction className="relative">
-          <ExportButton className="absolute end-0 top-0" />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">
+                <FolderUp /> <span className="hidden lg:inline">Export</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>Excel</DropdownMenuItem>
+              <DropdownMenuItem>PDF</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </CardAction>
       </CardHeader>
       <CardContent className="flex-1">

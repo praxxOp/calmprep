@@ -7,15 +7,16 @@ import { cookies } from "next/headers";
 export async function generateMetadata() {
   return generateMeta({
     title: "Mail App",
+    additionalTitle: true,
     description:
-      "Easily organize incoming and outgoing mail with the mail management template. Built with shadcn/ui, Next.js and Tailwind CSS.",
+      "Manage incoming messages, organize folders, and categorize conversations with a responsive multi-pane email interface. A professional mail management application built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/mail"
   });
 }
 
 export default async function MailPage() {
-  const cookieID = "react-resizable-panels:layout:mail-app"
-  const collapsedCookieID = "react-resizable-panels:collapsed"
+  const cookieID = "react-resizable-panels:layout:mail-app";
+  const collapsedCookieID = "react-resizable-panels:collapsed";
 
   const layout = (await cookies()).get(cookieID);
   const defaultLayout = layout ? JSON.parse(layout.value) : undefined;
@@ -24,7 +25,13 @@ export default async function MailPage() {
 
   return (
     <div className="h-(--content-full-height) rounded-md border">
-      <Mail mails={mails} defaultLayout={defaultLayout} cookieID={cookieID} defaultCollapsed={defaultCollapsed} collapsedCookieID={collapsedCookieID} />
+      <Mail
+        mails={mails}
+        defaultLayout={defaultLayout}
+        cookieID={cookieID}
+        defaultCollapsed={defaultCollapsed}
+        collapsedCookieID={collapsedCookieID}
+      />
     </div>
   );
 }

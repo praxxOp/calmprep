@@ -12,9 +12,9 @@ import { Button } from "@/components/ui/button";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: "Hotel Admin Dashboard",
+    title: "Hotel Admin Dashboard Template",
     description:
-      "On the hotel management admin dashboard, you can see your turnover, manage reservations, and view your customers. Built with shadcn/ui, Tailwind CSS, Next.js.",
+      "Manage hotel reservations, revenue, and guest bookings. A professional hospitality dashboard built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/hotel"
   });
 }

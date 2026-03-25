@@ -11,7 +11,7 @@ export async function generateMetadata() {
   return generateMeta({
     title: "Transactions",
     description:
-      "Payment admin dashboard is a template used to track, manage and monitor payments and transactions. Built with shadcn/ui, Tailwind CSS, Next.js and React.",
+      "Monitor payment history, withdrawals, and transaction statuses. A professional admin dashboard page built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/payment/transactions"
   });
 }

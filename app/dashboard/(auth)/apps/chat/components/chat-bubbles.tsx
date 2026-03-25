@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import { Ellipsis, FileIcon, PlayIcon } from "lucide-react";
 import { ChatMessageProps } from "../types";
 
-import { Card, CardContent } from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,7 +10,7 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { MessageStatusIcon } from "@/app/dashboard/(auth)/apps/chat/components";
+import { MessageStatusIcon } from "./message-status-icon";
 import Image from "next/image";
 
 function TextChatBubble({ message }: { message: ChatMessageProps }) {
@@ -30,7 +29,7 @@ function TextChatBubble({ message }: { message: ChatMessageProps }) {
         <div className={cn({ "order-2": !message.own_message })}>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button size="icon" variant="ghost">
+              <Button size="icon-xs" variant="ghost">
                 <Ellipsis />
               </Button>
             </DropdownMenuTrigger>
@@ -91,8 +90,8 @@ function FileChatBubble({ message }: { message: ChatMessageProps }) {
         <div className={cn({ "order-2": !message.own_message })}>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost">
-                <Ellipsis className="h-4 w-4" />
+              <Button size="icon-xs" variant="ghost">
+                <Ellipsis />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align={message.own_message ? "start" : "end"}>
@@ -144,7 +143,7 @@ function VideoChatBubble({ message }: { message: ChatMessageProps }) {
         <div className={cn({ "order-2": !message.own_message })}>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost">
+              <Button size="icon-xs" variant="ghost">
                 <Ellipsis />
               </Button>
             </DropdownMenuTrigger>
@@ -194,8 +193,8 @@ function SoundChatBubble({ message }: { message: ChatMessageProps }) {
         <div className={cn({ "order-2": !message.own_message })}>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost">
-                <Ellipsis className="h-4 w-4" />
+              <Button size="icon-xs" variant="ghost">
+                <Ellipsis />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align={message.own_message ? "start" : "end"}>
@@ -272,7 +271,7 @@ function ImageChatBubble({ message }: { message: ChatMessageProps }) {
         <div className={cn({ "order-2": !message.own_message })}>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost">
+              <Button size="icon-xs" variant="ghost">
                 <Ellipsis />
               </Button>
             </DropdownMenuTrigger>

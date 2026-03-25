@@ -3,8 +3,15 @@
 import { Line, LineChart, Tooltip } from "recharts";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExportButton } from "@/components/CardActionMenus";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { FolderUp } from "lucide-react";
 
 const chartData = [
   {
@@ -58,7 +65,17 @@ export function ExerciseMinutes() {
             Your exercise minutes are ahead of where you normally are.
           </CardDescription>
         </div>
-        <ExportButton />
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline">
+              <FolderUp /> <span className="hidden lg:inline">Export</span>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem>Excel</DropdownMenuItem>
+            <DropdownMenuItem>PDF</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </CardHeader>
       <CardContent>
         <ChartContainer className="h-32 w-full lg:h-[250px]" config={chartConfig}>

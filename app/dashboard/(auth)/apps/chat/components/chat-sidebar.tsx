@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { Search } from "lucide-react";
-import useChatStore from "@/app/dashboard/(auth)/apps/chat/useChatStore";
-import { ChatItemProps } from "@/app/dashboard/(auth)/apps/chat/types";
+import { PlusIcon, Search } from "lucide-react";
+import useChatStore from "../useChatStore";
+import { ChatItemProps } from "../types";
 
-import { Input } from "@/components/ui/input";
-import { ChatListItem } from "@/app/dashboard/(auth)/apps/chat/components/chat-list-item";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
+import { ChatListItem } from "./chat-list-item";
 import {
   Card,
   CardAction,
@@ -15,7 +15,14 @@ import {
   CardHeader,
   CardTitle
 } from "@/components/ui/card";
-import { ActionDropdown } from "@/app/dashboard/(auth)/apps/chat/components/action-dropdown";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 export function ChatSidebar({ chats }: { chats: ChatItemProps[] }) {
   const { selectedChat } = useChatStore();
@@ -31,24 +38,36 @@ export function ChatSidebar({ chats }: { chats: ChatItemProps[] }) {
   };
 
   return (
-    <Card className="w-full pb-0 lg:w-96">
+    <Card className="w-full pb-0 lg:w-80">
       <CardHeader>
-        <CardTitle className="font-display text-xl lg:text-2xl">Chats</CardTitle>
+        <CardTitle className="font-display text-xl lg:text-xl">Chats</CardTitle>
         <CardAction>
-          <ActionDropdown />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon-sm" className="rounded-full">
+                <PlusIcon />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuGroup>
+                <DropdownMenuItem>New chat</DropdownMenuItem>
+                <DropdownMenuItem>Create group</DropdownMenuItem>
+                <DropdownMenuItem>Add contact</DropdownMenuItem>
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </CardAction>
-        <CardDescription className="relative col-span-2 mt-4 flex w-full items-center">
-          <Search className="text-muted-foreground absolute start-4 size-4" />
-          <Input
-            type="text"
-            className="ps-10"
-            placeholder="Chats search..."
-            onChange={changeHandle}
-          />
+        <CardDescription className="col-span-2 mt-4 w-full">
+          <InputGroup>
+            <InputGroupAddon>
+              <Search />
+            </InputGroupAddon>
+            <InputGroupInput type="text" placeholder="Chats search..." onChange={changeHandle} />
+          </InputGroup>
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="flex-1 overflow-auto p-0">
+      <CardContent className="flex-1 overflow-auto border-t p-0">
         <div className="block min-w-0 divide-y">
           {filteredChats.length ? (
             filteredChats.map((chat, key) => (

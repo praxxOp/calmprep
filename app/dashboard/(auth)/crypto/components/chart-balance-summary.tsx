@@ -9,7 +9,15 @@ import {
   ChartTooltipContent
 } from "@/components/ui/chart";
 import { Card, CardHeader, CardTitle, CardContent, CardAction } from "@/components/ui/card";
-import { ExportButton } from "@/components/CardActionMenus";
+import { Button } from "@/components/ui/button";
+import {} from "@/components/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@radix-ui/react-dropdown-menu";
+import { FolderUp } from "lucide-react";
 
 const chartData = [
   { month: "January", received: 100, send: 180, withdraw: 290 },
@@ -41,10 +49,18 @@ export function BalanceSummeryChart() {
     <Card className="h-full">
       <CardHeader>
         <CardTitle>Balance Summary</CardTitle>
-        <CardAction className="relative">
-          <div className="absolute end-0 top-0">
-            <ExportButton />
-          </div>
+        <CardAction>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">
+                <FolderUp /> <span className="hidden lg:inline">Export</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>Excel</DropdownMenuItem>
+              <DropdownMenuItem>PDF</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </CardAction>
       </CardHeader>
       <CardContent>

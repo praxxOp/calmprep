@@ -1,9 +1,8 @@
-import React from "react";
 import { generateMeta } from "@/lib/utils";
 import { promises as fs } from "fs";
 import path from "path";
 
-import Tasks from "@/app/dashboard/(auth)/apps/todo-list-app/tasks";
+import Tasks from "./components/tasks";
 
 async function getTasks() {
   const data = await fs.readFile(
@@ -15,8 +14,9 @@ async function getTasks() {
 export async function generateMetadata() {
   return generateMeta({
     title: "Todo List App",
+    additionalTitle: true,
     description:
-      "Organize your tasks, add new tasks and view task details with the to-do list app template. Built with shadcn/ui, Next.js and Tailwind CSS.",
+      "Organize daily tasks, categorize activities, and manage priorities with a clean, multi-pane to-do list ui featuring detailed task views. A professional productivity app built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/todo-list-app"
   });
 }

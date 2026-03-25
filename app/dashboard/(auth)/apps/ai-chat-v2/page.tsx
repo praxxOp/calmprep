@@ -6,9 +6,10 @@ import AIChatInterface from "./components/ai-chat-interface";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: "AI Chat V2",
+    title: "AI Chatbot",
+    additionalTitle: true,
     description:
-      "AI chatbot is an app ui template that allows users to interact with an AI for messaging and assistance. Built with shadcn/ui, Next.js and Tailwind CSS.",
+      "Engage with advanced AI models through a feature-rich chat interface featuring history tracking and contextual quick actions. A professional AI assistant page built with React, TypeScript, Next.js, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/ai-chat-v2"
   });
 }

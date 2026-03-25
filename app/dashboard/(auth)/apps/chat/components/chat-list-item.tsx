@@ -19,11 +19,11 @@ export function ChatListItem({ chat, active }: { chat: ChatItemProps; active: bo
   return (
     <div
       className={cn(
-        "group/item hover:bg-muted relative flex min-w-0 cursor-pointer items-center gap-4 px-6 py-4",
+        "group/item hover:bg-muted relative flex min-w-0 cursor-pointer items-center gap-4 px-6 py-3",
         { "dark:bg-muted! bg-gray-200!": active }
       )}
       onClick={() => handleClick(chat)}>
-      <Avatar className="overflow-visible md:size-10">
+      <Avatar>
         <AvatarImage src={chat.user?.avatar} alt="avatar image" />
         <AvatarIndicator variant={chat.user?.online_status} />
         <AvatarFallback>{generateAvatarFallback(chat.user?.name)}</AvatarFallback>
@@ -52,7 +52,7 @@ export function ChatListItem({ chat, active }: { chat: ChatItemProps; active: bo
           { "dark:from-muted from-gray-200": active }
         )}>
         <ChatUserDropdown>
-          <Button size="icon" variant="outline" className="rounded-full">
+          <Button size="icon-xs" variant="outline" className="rounded-full">
             <Ellipsis />
           </Button>
         </ChatUserDropdown>

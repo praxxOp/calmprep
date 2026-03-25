@@ -19,9 +19,10 @@ import { ProjectsTable } from "./components/projects-table";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: "Shadcn User Profile Page",
+    title: "User Profile Page",
+    additionalTitle: true,
     description:
-      "A page within a dashboard that shows detailed user information, profile settings, and recent activity. Built with shadcn/ui, Tailwind CSS, Next.js and React. Typescript is included.",
+      "Manage detailed user profiles, activity streams, and projects. A professional dashboard page built with React, TypeScript, Tailwind CSS, and shadcn/ui components.",
     canonical: "/pages/profile-v2"
   });
 }

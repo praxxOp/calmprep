@@ -5,10 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: "Text to Speech",
+    title: "Text to Speech App",
     description:
       "Text to speech app is a ui template that converts written text into spoken audio. Built with shadcn/ui, Tailwind CSS, Next.js and React.",
-    canonical: "/text-to-speech"
+    canonical: "/apps/text-to-speech"
   });
 }
 

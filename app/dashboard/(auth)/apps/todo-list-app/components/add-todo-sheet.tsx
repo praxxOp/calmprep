@@ -4,15 +4,15 @@ import { CalendarIcon, Plus, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { useTodoStore } from "@/app/dashboard/(auth)/apps/todo-list-app/store";
-import { todoFormSchema, TodoFormValues } from "@/app/dashboard/(auth)/apps/todo-list-app/schemas";
+import { useTodoStore } from "../store";
+import { todoFormSchema, TodoFormValues } from "../schemas";
 import {
   priorityDotColors,
   statusDotColors,
   EnumTodoStatus,
   todoStatusNamed,
   EnumTodoPriority
-} from "@/app/dashboard/(auth)/apps/todo-list-app/enum";
+} from "../enum";
 import { toast } from "sonner";
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";

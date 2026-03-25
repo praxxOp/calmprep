@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { AreaChartIcon, DollarSignIcon, HandCoinsIcon } from "lucide-react";
 import { Bar, BarChart, XAxis } from "recharts";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -21,7 +20,14 @@ import {
   ChartTooltipContent
 } from "@/components/ui/chart";
 import { Progress } from "@/components/ui/progress";
-import { ExportButton } from "@/components/CardActionMenus";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { FolderUp } from "lucide-react";
 
 const chartData = [
   { day: "Mo", sales: 35 },
@@ -49,7 +55,17 @@ export function EarningReportsCard() {
         <CardTitle>Earning Reports</CardTitle>
         <CardDescription>Last 28 days</CardDescription>
         <CardAction className="relative">
-          <ExportButton className="absolute end-0 top-0" />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">
+                <FolderUp /> <span className="hidden lg:inline">Export</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>Excel</DropdownMenuItem>
+              <DropdownMenuItem>PDF</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </CardAction>
       </CardHeader>
       <CardContent>

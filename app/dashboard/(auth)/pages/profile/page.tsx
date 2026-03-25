@@ -14,9 +14,10 @@ import { ProfileCard } from "./components/profile-card";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Shadcn Profile Page",
+    title: "Profile Page",
+    additionalTitle: true,
     description:
-      "You can use the profile page template to show user details. Built with shadcn/ui components.",
+      "Manage user profiles, skills, and activity feeds. A comprehensive admin dashboard page built with React, TypeScript, Tailwind CSS, and shadcn/ui components.",
     canonical: "/pages/profile"
   });
 }

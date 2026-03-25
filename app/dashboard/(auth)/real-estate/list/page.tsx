@@ -6,8 +6,9 @@ import data from "../data.json";
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Real Estate Property List",
+    additionalTitle: true,
     description:
-      "A comprehensive real estate list admin dashboard template built with React, TypeScript, shadcn/ui, and Tailwind CSS, featuring type-safe property management grids, dynamic filtering, and seamless data visualization. These Tailwind CSS layouts are designed to streamline real estate workflows, providing a professional and responsive administrative interface for managing high-volume property inventories.",
+      "Manage real estate inventory with advanced filtering and sorting. A professional property list page built with React, TypeScript, Tailwind CSS, shadcn/ui, and Tanstack Table.",
     canonical: "/real-estate/list"
   });
 }

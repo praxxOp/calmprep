@@ -9,9 +9,10 @@ import notifications from "./data.json";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Notifications Page built with Shadcn UI and Tailwind CSS",
+    title: "Notifications Page",
+    additionalTitle: true,
     description:
-      "Notifications page is a ui template used to display notifications to the user. Built with shadcn/ui, Tailwind CSS, Next.js and React.",
+      "Manage user alerts, mark all as read, and configure notification preferences. A professional notifications page built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/pages/notifications"
   });
 }

@@ -5,6 +5,7 @@ import Image from "next/image";
 export async function generateMetadata() {
   return generateMeta({
     title: "403 Page",
+    additionalTitle: true,
     description:
       "The unauthorized 403 page template. Built with shadcn/ui, Tailwind CSS and Next.js.",
     canonical: "/pages/error/403"

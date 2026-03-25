@@ -1,11 +1,12 @@
-import Onboarding from "@/app/dashboard/(auth)/pages/onboarding-flow/components/onboarding";
+import Onboarding from "./components/onboarding";
 import { generateMeta } from "@/lib/utils";
 
 export async function generateMetadata() {
   return generateMeta({
     title: "Onboarding Flow",
+    additionalTitle: true,
     description:
-      "Onboarding flow screens are a step-by-step process that asks users questions to personalize their experience. Built with shadcn/ui, Tailwind CSS, Next.js.",
+      "Streamline user registration with step-by-step questions and personalized flows. A professional onboarding page built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/pages/onboarding-flow"
   });
 }

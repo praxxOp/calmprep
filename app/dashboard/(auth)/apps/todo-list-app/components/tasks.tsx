@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { useTodoStore } from "@/app/dashboard/(auth)/apps/todo-list-app/store";
+import { useTodoStore } from "../store";
 
-import TodoList from "@/app/dashboard/(auth)/apps/todo-list-app/components/todo-list";
-import AddTodoSheet from "@/app/dashboard/(auth)/apps/todo-list-app/components/add-todo-sheet";
-import TodoDetailSheet from "@/app/dashboard/(auth)/apps/todo-list-app/components/todo-detail-sheet";
-import { Todo } from "@/app/dashboard/(auth)/apps/todo-list-app/types";
+import TodoList from "./todo-list";
+import AddTodoSheet from "./add-todo-sheet";
+import TodoDetailSheet from "./todo-detail-sheet";
+import { Todo } from "../types";
 
 export default function Tasks({ tasks }: { tasks: Todo[] }) {
   const {

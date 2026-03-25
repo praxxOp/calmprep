@@ -3,9 +3,9 @@ import { AlertCircleIcon } from "lucide-react";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Logistics Admin Dashboard",
+    title: "Logistics Admin Dashboard Template",
     description:
-      "On the hotel admin dashboard, you can see your turnover, manage reservations, and view your customers. Built with shadcn/ui, Tailwind CSS, Next.js.",
+      "Manage shipments, fleet operations, and logistics tracking. A professional admin dashboard page built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/logistics"
   });
 }

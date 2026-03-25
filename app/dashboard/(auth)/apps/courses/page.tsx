@@ -1,17 +1,20 @@
 import { generateMeta } from "@/lib/utils";
-import { Metadata } from "next";
-import courseData from "./data.json";
 import { List, BarChart3 } from "lucide-react";
+import { Metadata } from "next";
+
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { InstructorSection, CourseContent, StudyProgress, CourseModules } from "./components";
 
+import courseData from "./data.json";
+
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: "Course App built with Shadcn UI and Tailwind CSS",
+    title: "Course App",
+    additionalTitle: true,
     description:
-      "Courses app is a ui template used to browse, register for, and manage training courses. Built with shadcn/ui, Tailwind CSS, Next.js and React.",
+      "Access video lessons, track curriculum progress, and manage learning milestones with an integrated course player and detailed module outlines. A professional e-learning application page built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/courses"
   });
 }

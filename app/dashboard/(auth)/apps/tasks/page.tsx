@@ -1,16 +1,19 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { z } from "zod";
+import { generateMeta } from "@/lib/utils";
 
 import { columns } from "./components/columns";
 import { DataTable } from "./components/data-table";
+
 import { taskSchema } from "./data/schema";
-import { generateMeta } from "@/lib/utils";
 
 export async function generateMetadata() {
   return generateMeta({
     title: "Tasks",
-    description: "A task and issue tracker build using Tanstack Table.",
+    additionalTitle: true,
+    description:
+      "Organize project issues, monitor task status, and manage priorities using a robust data table with advanced filtering and sorting. A professional task management application built with React, Next.js, TypeScript, Tailwind CSS, and Tanstack Table",
     canonical: "/apps/tasks"
   });
 }

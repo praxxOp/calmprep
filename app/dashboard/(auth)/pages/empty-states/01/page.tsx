@@ -12,7 +12,8 @@ import { FolderCodeIcon } from "lucide-react";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Shadcn Empty State 01",
+    title: "Empty State 01",
+    additionalTitle: true,
     description:
       "Empty states show placeholder content when no data is available. Built with shadcn/ui, Tailwind CSS, Next.js and React.",
     canonical: "/pages/empty-states/01"

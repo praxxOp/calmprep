@@ -3,13 +3,14 @@ import path from "path";
 import { promises as fs } from "fs";
 import { ChatItemProps, UserPropsTypes } from "./types";
 
-import { ChatSidebar, ChatContent } from "@/app/dashboard/(auth)/apps/chat/components";
+import { ChatSidebar, ChatContent } from "./components";
 
 export async function generateMetadata() {
   return generateMeta({
     title: "Chat App",
+    additionalTitle: true,
     description:
-      "A template to create chat and messaging apps for your customers or users. Built with shadcn/ui, Next.js and Tailwind CSS.",
+      "Manage real-time conversations, media sharing, and contact lists with a modern messaging ui. A professional chat application page built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/chat"
   });
 }

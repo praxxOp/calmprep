@@ -1,17 +1,18 @@
 import { generateMeta } from "@/lib/utils";
 import { promises as fs } from "fs";
 import path from "path";
-import ApiKeysDataTable from "./datatable";
-import UpgradePlanCard from "./upgrade-plan-card";
-import SuccessfulConversionsCard from "./successful-conversions-card";
-import FailedConversionsCard from "./failed-conversions-card";
-import ApiCallsCard from "@/app/dashboard/(auth)/apps/api-keys/api-calls-card";
+import ApiKeysDataTable from "./components/datatable";
+import UpgradePlanCard from "./components/upgrade-plan-card";
+import SuccessfulConversionsCard from "./components/successful-conversions-card";
+import FailedConversionsCard from "./components/failed-conversions-card";
+import ApiCallsCard from "./components/api-calls-card";
 
 export async function generateMetadata() {
   return generateMeta({
     title: "Api Keys",
+    additionalTitle: true,
     description:
-      "A template for listing and managing your API keys. Easily create, organize and control the API keys you use in your projects. Built with shadcn/ui.",
+      "Securely manage API keys, track usage analytics, and monitor conversion success rates with real-time metrics. A professional API management dashboard built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/api-keys"
   });
 }

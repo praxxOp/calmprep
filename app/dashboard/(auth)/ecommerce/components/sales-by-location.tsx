@@ -1,11 +1,16 @@
 "use client";
 
-import { Info } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
-import { ExportButton } from "@/components/CardActionMenus";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
 import { Progress } from "@/components/ui/progress";
+import { Button } from "@/components/ui/button";
+import { FolderUp } from "lucide-react";
 
 type SalesData = {
   country: string;
@@ -29,9 +34,17 @@ export function EcommerceSalesByLocationCard() {
       <CardHeader>
         <CardTitle className="relative">
           Sales by Location
-          <div className="absolute end-0 top-0">
-            <ExportButton />
-          </div>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">
+                <FolderUp /> <span className="hidden lg:inline">Export</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>Excel</DropdownMenuItem>
+              <DropdownMenuItem>PDF</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </CardTitle>
         <CardDescription>Income in the last 28 days</CardDescription>
       </CardHeader>

@@ -3,8 +3,9 @@ import { generateMeta } from "@/lib/utils";
 export async function generateMetadata() {
   return generateMeta({
     title: "Pricing Tables",
+    additionalTitle: true,
     description:
-      "Compare your services with flexible and user-friendly pricing tables. Offer your customers the most suitable plan with transparent pricing options.",
+      "Compare subscription plans and pricing models with flexible layout options including columns, tables, and single cards. A professional pricing page built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/pages/pricing/column"
   });
 }

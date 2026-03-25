@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import { generateMeta } from "@/lib/utils";
 
 import ImageGenerator from "./components/image-generator";
-import { TooltipProvider } from "@/components/ui/tooltip";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "AI Image Generator",
+    additionalTitle: true,
     description:
-      "UI components and application template for AI image generation tools. Built with Tailwind CSS, React, Next.js. shadcn/ui is compatible and contains Typescript files.",
+      "Create high-fidelity visuals from text prompts with granular control over styles, aspect ratios, and seeds. A professional AI image generation workspace built with React, TypeScript, Next.js, Tailwind CSS, and shadcn/ui.",
     canonical: "/apps/ai-image-generator"
   });
 }

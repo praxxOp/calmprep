@@ -13,8 +13,9 @@ import ProductList from "@/app/dashboard/(auth)/pages/products/product-list";
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Product List",
+    additionalTitle: true,
     description:
-      "Product list page created using Tanstack Table. List or filter products. Built with shadcn/ui, Tailwind CSS and Next.js.",
+      "Manage inventory and track sales metrics on a professional admin page. Built with React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, and Tanstack Table for data handling.",
     canonical: "/pages/products"
   });
 }

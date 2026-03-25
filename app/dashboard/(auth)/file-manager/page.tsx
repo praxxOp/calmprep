@@ -11,9 +11,9 @@ import {
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "File Manager Admin Dashboard",
+    title: "File Manager Admin Dashboard Template",
     description:
-      "An admin dashboard template for managing files, folders, and monitoring storage status. Perfect for building streamlined file management systems.",
+      "Manage files, folders, and storage status with interactive charts. A professional admin page built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/file-manager"
   });
 }

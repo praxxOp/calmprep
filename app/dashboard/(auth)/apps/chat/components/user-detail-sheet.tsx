@@ -19,13 +19,13 @@ export function UserDetailSheet({ user }: { user: UserPropsTypes }) {
     <Sheet open={showProfileSheet} onOpenChange={toggleProfileSheet}>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle className="text-2xl">Profile</SheetTitle>
+          <SheetTitle className="text-xl">Profile</SheetTitle>
         </SheetHeader>
         <div className="overflow-y-auto px-4">
           <div className="my-4 flex flex-col items-center justify-end">
-            <Avatar className="mb-4 size-32">
-              <AvatarImage src={user.avatar} alt="avatar image" />
-              <AvatarFallback>{generateAvatarFallback(user.name)}</AvatarFallback>
+            <Avatar className="mb-4 size-28">
+              {user.avatar && <AvatarImage src={user.avatar} alt="avatar image" />}
+              <AvatarFallback className="text-2xl">{generateAvatarFallback(user.name)}</AvatarFallback>
             </Avatar>
             <h4 className="mb-2 text-xl font-semibold">{user.name}</h4>
             <div className="text-xs">
@@ -132,7 +132,7 @@ export function UserDetailSheet({ user }: { user: UserPropsTypes }) {
                     <Button
                       key={key}
                       variant="outline"
-                      className="size-12 rounded-full"
+                      className="size-8 rounded-full"
                       size="icon"
                       asChild>
                       <Link

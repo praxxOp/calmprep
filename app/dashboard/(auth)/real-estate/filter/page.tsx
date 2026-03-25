@@ -6,8 +6,9 @@ import data from "../data.json";
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Real Estate Filter",
+    additionalTitle: true,
     description:
-      "A professional real estate filter page admin dashboard template built with React, TypeScript, and shadcn/ui, featuring type-safe search parameters, dynamic category selection, and advanced filtering logic. These Tailwind CSS layouts are designed to provide a seamless data discovery experience, allowing for precise property management and streamlined navigation within your administrative interface.",
+      "Advanced real estate filtering with type-safe search and dynamic categories. A professional page built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/real-estate/filter"
   });
 }

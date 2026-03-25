@@ -16,8 +16,9 @@ import { FriendsCard } from "./components/friends-card";
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
     title: "Fitness Widgets",
+    additionalTitle: true,
     description:
-      "UI components that display fitness data such as workouts, progress, and health metrics within a dashboard. Built with shadcn/ui, Tailwind CSS, Next.js.",
+      "Monitor health metrics, daily workouts, and sleep activity. A professional fitness dashboard page built with React, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/widgets/fitness"
   });
 }

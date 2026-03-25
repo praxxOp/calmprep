@@ -16,9 +16,9 @@ import { Download } from "lucide-react";
 
 export async function generateMetadata() {
   return generateMeta({
-    title: "Shadcn Admin Dashboard",
+    title: "Admin Dashboard Template",
     description:
-      "The admin dashboard template offers a sleek and efficient interface for monitoring important data and user interactions. Built with shadcn/ui.",
+      "Track revenue, subscriptions, and team activity with a modern interface. A professional admin page built with React, Next.js, TypeScript, Tailwind CSS, and shadcn/ui.",
     canonical: "/default"
   });
 }

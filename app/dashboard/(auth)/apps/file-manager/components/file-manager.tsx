@@ -39,7 +39,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 
 import { FileUploadDialog } from "./file-upload-dialog";
 import allFileItems from "../data.json";
-import FileManagerPagination from "@/app/dashboard/(auth)/apps/file-manager/components/pagination";
+import FileManagerPagination from "./pagination";
 
 type FileItem = (typeof allFileItems)[number];
 
