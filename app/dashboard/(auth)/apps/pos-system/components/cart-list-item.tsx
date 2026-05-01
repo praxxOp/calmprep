@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { X } from "lucide-react";
 
 import { CartItem, useStore } from "../store";
@@ -25,11 +24,10 @@ export default function CartListItem({ product }: CartListItem) {
           onClick={() => removeFromCart(product.product.id)}>
           <X />
         </Button>
-        <Image
+        <img
           src={product.product.image || "/placeholder.svg"}
           alt={product.product.name}
-          fill
-          className="rounded object-cover"
+          className="absolute inset-0 h-full w-full rounded object-cover"
         />
       </div>
       <div className="flex flex-1 flex-col items-start gap-2 xl:flex-row xl:items-center xl:justify-between">

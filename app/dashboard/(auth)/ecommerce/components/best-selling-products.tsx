@@ -32,7 +32,6 @@ import {
   TableRow
 } from "@/components/ui/table";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
 
 export type Product = {
   id: number;
@@ -116,13 +115,10 @@ export const columns: ColumnDef<Product>[] = [
     header: "Product",
     cell: ({ row }) => (
       <div className="flex items-center gap-4">
-        <Image
-          width={30}
-          height={30}
+        <img
           className="size-8"
           src={row.original.image}
           alt="..."
-          unoptimized
         />
         <div className="capitalize">{row.getValue("name")}</div>
       </div>

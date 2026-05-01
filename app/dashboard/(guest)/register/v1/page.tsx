@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { generateMeta } from "@/lib/utils";
 import { GithubIcon } from "lucide-react";
 
@@ -20,13 +19,12 @@ export default function Page() {
   return (
     <div className="flex pb-8 lg:h-screen lg:pb-0">
       <div className="hidden w-1/2 bg-gray-100 lg:block">
-        <Image
-          width={1000}
-          height={1000}
+        <img
+          width="1000px"
+          height="1000px"
           src={`/images/extra/image4.jpg`}
           alt="shadcn/ui login page"
           className="h-full w-full object-cover"
-          unoptimized
         />
       </div>
 

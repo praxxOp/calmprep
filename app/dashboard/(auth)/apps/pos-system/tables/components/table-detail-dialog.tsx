@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import { Order, Table } from "../../store";
 
@@ -60,11 +59,10 @@ export default function TableDetailDialog({ table, order, open, setOpen }: Table
                         <td className="px-4 py-3">
                           <div className="flex items-center">
                             <div className="relative mr-3 h-10 w-10 overflow-hidden rounded">
-                              <Image
+                              <img
                                 src={item.product.image || "/placeholder.svg"}
                                 alt={item.product.name}
-                                fill
-                                className="object-cover"
+                                className="absolute inset-0 h-full w-full object-cover"
                               />
                             </div>
                             <div>

@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -108,12 +107,9 @@ export const columns: ColumnDef<Course>[] = [
     header: "Course name",
     cell: ({ row }) => (
       <div className="flex items-center gap-4">
-        <Image
-          width={30}
-          height={30}
+        <img
           className="size-8"
           src={row.original.image}
-          unoptimized
           alt="shadcn/ui"
         />
         <div className="capitalize">{row.getValue("name")}</div>

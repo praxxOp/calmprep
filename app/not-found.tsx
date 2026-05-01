@@ -1,5 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -27,8 +26,8 @@ export default function NotFound() {
       <div className="hidden lg:block">
         <img
           src={`/404.svg`}
-          width={300}
-          height={400}
+          width="300px"
+          height="400px"
           className="w-full object-contain lg:max-w-2xl"
           alt="not found image"
         />

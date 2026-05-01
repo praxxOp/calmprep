@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { generateMeta } from "@/lib/utils";
 import type React from "react";
 import {

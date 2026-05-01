@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { MessageStatusIcon } from "./message-status-icon";
-import Image from "next/image";
 
 function TextChatBubble({ message }: { message: ChatMessageProps }) {
   return (
@@ -250,13 +249,12 @@ function ImageChatBubble({ message }: { message: ChatMessageProps }) {
                 <figure
                   className="relative cursor-pointer overflow-hidden rounded-lg transition-opacity hover:opacity-90"
                   key={key}>
-                  <Image
+                  <img
                     src={image}
                     className="aspect-4/3 object-cover"
-                    width={100}
-                    height={100}
+                    width="100px"
+                    height="100px"
                     alt="shadcn/ui"
-                    unoptimized
                   />
                   {key + 1 === images_limit && images.length > images_limit && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-3xl font-semibold text-white">

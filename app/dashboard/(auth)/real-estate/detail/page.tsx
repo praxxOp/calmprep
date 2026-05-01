@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -109,7 +108,7 @@ export default function Page() {
 
       <section className="grid gap-3 lg:grid-cols-3">
         <div className="relative min-h-[250px] overflow-hidden rounded-md border lg:col-span-2 lg:min-h-[420px]">
-          <Image src={mainImage.url} alt={mainImage.alt} fill className="object-cover" />
+          <img src={mainImage.url} alt={mainImage.alt} className="absolute inset-0 h-full w-full object-cover" />
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-2">
@@ -117,7 +116,7 @@ export default function Page() {
             <div
               className="relative min-h-[200px] overflow-hidden rounded-md border lg:min-h-[200px]"
               key={image.url}>
-              <Image src={image.url} alt={image.alt} fill className="object-cover" />
+              <img src={image.url} alt={image.alt} className="absolute inset-0 h-full w-full object-cover" />
               {index === subImages.length - 1 && (
                 <div className="absolute right-3 bottom-3">
                   <PhotoGalleryDialog images={detail.gallery} />

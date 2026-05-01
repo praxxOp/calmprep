@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-
 const activities = [
   {
     type: "Buy",
@@ -73,13 +71,10 @@ export function RecentActivities() {
         <div className="space-y-6">
           {activities.map((activity, key) => (
             <div className="flex items-center" key={key}>
-              <Image
+              <img
                 className="bg-muted size-12 rounded-full border p-2"
                 src={activity.icon}
-                width={40}
-                height={40}
                 alt="shadcn/ui"
-                unoptimized
               />
               <div className="ml-4 space-y-1">
                 <p className="flex items-center gap-2 text-sm leading-none font-medium">

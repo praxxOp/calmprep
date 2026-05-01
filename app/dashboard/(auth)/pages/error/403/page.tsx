@@ -1,6 +1,5 @@
 import { generateMeta } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 export async function generateMetadata() {
   return generateMeta({
@@ -17,13 +16,12 @@ export default function Page() {
     <div className="flex h-[calc(100vh-6rem)] items-center justify-center">
       <div className="text-center">
         <figure className="m-auto w-40 lg:w-60">
-          <Image
-            width={300}
-            height={200}
+          <img
+            width="300px"
+            height="200px"
             src={`/403.svg`}
             className="w-full"
             alt="..."
-            unoptimized
           />
         </figure>
         <div className="mt-6 space-y-4 lg:mt-8">

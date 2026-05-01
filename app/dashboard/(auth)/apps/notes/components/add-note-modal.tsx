@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ImageIcon, Tag, PenSquare, Check, Trash2Icon, ArchiveIcon } from "lucide-react";
 import { RichTextEditorDemo } from "@/components/ui/custom/tiptap/rich-text-editor";
@@ -52,13 +51,12 @@ export function AddNoteModal() {
       <DialogContent className="max-h-screen max-w-(--breakpoint-sm) overflow-y-scroll p-0 lg:overflow-y-auto">
         {imagePreview && (
           <figure>
-            <Image
+            <img
               src={imagePreview}
-              width={200}
-              height={200}
+              width="200px"
+              height="200px"
               alt="shadcn/ui"
               className="aspect-video w-full rounded-tl-md rounded-tr-md object-cover"
-              unoptimized
             />
           </figure>
         )}

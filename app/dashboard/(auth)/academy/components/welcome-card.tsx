@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -21,29 +19,26 @@ export function WelcomeCard() {
             </div>
           </div>
           <figure className="hidden lg:col-span-1 lg:block">
-            <Image
-              width={100}
-              height={50}
+            <img
+              width="100px"
+              height="50px"
               src={`/academy-dashboard-light.svg`}
               className="block w-full dark:hidden"
-              unoptimized
               alt="shadcn/ui"
             />
-            <Image
-              width={100}
-              height={50}
+            <img
+              width="100px"
+              height="50px"
               src={`/academy-dashboard-dark.svg`}
               className="hidden w-full dark:block"
-              unoptimized
               alt="shadcn/ui"
             />
           </figure>
-          <Image
-            width={800}
-            height={300}
+          <img
+            width="800px"
+            height="300px"
             src={`/star-shape.png`}
             className="pointer-events-none absolute inset-0 aspect-auto"
-            unoptimized
             alt="shadcn/ui"
           />
         </div>

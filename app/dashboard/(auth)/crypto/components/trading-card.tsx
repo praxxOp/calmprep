@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { useForm } from "react-hook-form";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -98,12 +97,9 @@ export function TradingCard() {
                             <SelectTrigger className="w-full">
                               <SelectValue>
                                 <div className="flex items-center gap-2">
-                                  <Image
-                                    width={20}
-                                    height={20}
+                                  <img
                                     className="size-6"
                                     src={`/images/crypto-icons/${coins.find((coin) => coin.name === selectedCoin)?.icon}.svg`}
-                                    unoptimized
                                     alt="..."
                                   />
                                   {coins.find((coin) => coin.name === selectedCoin)?.name}/
@@ -115,12 +111,9 @@ export function TradingCard() {
                               {coins.map((coin) => (
                                 <SelectItem key={coin.name} value={coin.name}>
                                   <div className="flex items-center gap-2">
-                                    <Image
-                                      width={20}
-                                      height={20}
+                                    <img
                                       className="size-6"
                                       src={`/images/crypto-icons/${coin.icon}.svg`}
-                                      unoptimized
                                       alt="..."
                                     />
                                     {coin.name}/{coin.short_name}
@@ -182,12 +175,9 @@ export function TradingCard() {
                             <SelectTrigger className="w-full">
                               <SelectValue>
                                 <div className="flex items-center gap-2">
-                                  <Image
-                                    width={20}
-                                    height={20}
+                                  <img
                                     className="size-6"
                                     src={`/images/crypto-icons/${coins.find((coin) => coin.name === selectedCoin)?.icon}.svg`}
-                                    unoptimized
                                     alt="..."
                                   />
                                   {coins.find((coin) => coin.name === selectedCoin)?.name}/
@@ -199,12 +189,9 @@ export function TradingCard() {
                               {coins.map((coin) => (
                                 <SelectItem key={coin.name} value={coin.name}>
                                   <div className="flex items-center gap-2">
-                                    <Image
-                                      width={20}
-                                      height={20}
+                                    <img
                                       className="size-6"
                                       src={`/images/crypto-icons/${coin.icon}.svg`}
-                                      unoptimized
                                       alt="..."
                                     />
                                     {coin.name}/{coin.short_name}

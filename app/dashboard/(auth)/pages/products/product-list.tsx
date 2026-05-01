@@ -21,7 +21,6 @@ import {
   PlusCircle,
   Star
 } from "lucide-react";
-import Image from "next/image";
 
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import {
@@ -112,11 +111,10 @@ export const columns: ColumnDef<Product>[] = [
     cell: ({ row }) => (
       <div className="flex items-center gap-4">
         <figure className="rounded-lg border">
-          <Image
+          <img
             src={`/images${row.original.image}`}
-            width={48}
-            height={48}
-            unoptimized
+            width="48px"
+            height="48px"
             alt="..."
           />
         </figure>

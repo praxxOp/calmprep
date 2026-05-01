@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -45,12 +44,10 @@ export function PhotoGalleryDialog({ images }: PhotoGalleryDialogProps) {
             {images.map((image) => (
               <CarouselItem key={image.url}>
                 <div className="relative aspect-video overflow-hidden rounded-md border">
-                  <Image
+                  <img
                     src={image.url}
                     alt={image.alt}
-                    fill
-                    className="object-cover"
-                    sizes="90vw"
+                    className="absolute inset-0 h-full w-full object-cover"
                   />
                 </div>
               </CarouselItem>

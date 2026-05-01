@@ -5,7 +5,6 @@ import useChatStore from "../useChatStore";
 import { ChatMessageProps } from "../types";
 
 import { ChatHeader, ChatBubble, ChatFooter, UserDetailSheet } from "./index";
-import Image from "next/image";
 
 export function ChatContent() {
   const { selectedChat } = useChatStore();
@@ -20,17 +19,16 @@ export function ChatContent() {
   if (!selectedChat) {
     return (
       <figure className="hidden h-full items-center justify-center text-center lg:flex">
-        <Image
-          width={200}
-          height={200}
+        <img
+          width="200px"
+          height="200px"
           className="block max-w-sm dark:hidden"
           src={`/not-selected-chat.svg`}
           alt="shadcn/ui"
-          unoptimized
         />
-        <Image
-          width={200}
-          height={200}
+        <img
+          width="200px"
+          height="200px"
           className="hidden max-w-sm dark:block"
           src={`/not-selected-chat-light.svg`}
           alt="shadcn/ui"

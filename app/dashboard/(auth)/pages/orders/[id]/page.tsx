@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   CheckCircle,
   CheckCircle2,
@@ -234,13 +233,12 @@ export default function Page() {
                 <TableRow key={item.id}>
                   <TableCell>
                     <div className="flex items-center gap-4">
-                      <Image
+                      <img
                         src={`/images${item.image}`}
-                        width={60}
-                        height={60}
+                        width="60px"
+                        height="60px"
                         className="h-10 w-10 rounded-md lg:h-16 lg:w-16"
                         alt=""
-                        unoptimized
                       />
                       <span>{item.name}</span>
                     </div>

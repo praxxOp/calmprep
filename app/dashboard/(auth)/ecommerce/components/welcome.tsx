@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -21,12 +19,11 @@ export function EcommerceWelcomeCard() {
           <Button variant="outline">View Sales</Button>
         </div>
       </CardContent>
-      <Image
-        width={800}
-        height={300}
+      <img
+        width="800px"
+        height="300px"
         src={`/star-shape.png`}
         className="pointer-events-none absolute inset-0 aspect-auto"
-        unoptimized
         alt="..."
       />
     </Card>

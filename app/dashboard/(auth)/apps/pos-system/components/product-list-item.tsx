@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { ShoppingCartIcon } from "lucide-react";
 
 import { Product, useStore } from "../store";
@@ -34,12 +33,10 @@ export default function ProductListItem({ product }: { product: Product }) {
   return (
     <div className="overflow-hidden rounded-md border">
       <div className="relative aspect-4/3">
-        <Image
+        <img
           src={product.image || "/placeholder.svg"}
           alt={product.name}
-          fill
-          className="object-cover"
-          unoptimized
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
       <div className="p-4">

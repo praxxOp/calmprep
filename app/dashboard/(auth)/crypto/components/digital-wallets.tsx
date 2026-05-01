@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -23,12 +22,9 @@ export function DigitalWallets() {
           href="#"
           className="hover:border-primary/30 hover:bg-muted block rounded-md border px-4 py-3 transition-colors">
           <div className="mb-2 flex items-center gap-2">
-            <Image
-              width={20}
-              height={20}
+            <img
               className="size-6 object-contain"
               src={"/images/crypto-icons/bitcoin.svg"}
-              unoptimized
               alt="shadcn/ui"
             />
             <span>Bitcoin Wallet</span>
@@ -39,12 +35,9 @@ export function DigitalWallets() {
           href="#"
           className="hover:border-primary/30 hover:bg-muted block rounded-md border px-4 py-3 transition-colors">
           <div className="mb-2 flex items-center gap-2">
-            <Image
-              width={20}
-              height={20}
+            <img
               className="size-6 object-contain"
               src={"/images/crypto-icons/ethereum.svg"}
-              unoptimized
               alt="shadcn/ui"
             />
             <span>Ethereum Wallet</span>
@@ -55,12 +48,9 @@ export function DigitalWallets() {
           href="#"
           className="hover:border-primary/30 hover:bg-muted block rounded-md border px-4 py-3 transition-colors">
           <div className="mb-2 flex items-center gap-2">
-            <Image
-              width={20}
-              height={20}
+            <img
               className="size-6 object-contain"
               src={"/images/crypto-icons/avalanche.svg"}
-              unoptimized
               alt="..."
             />
             <span>Avalanche Wallet</span>

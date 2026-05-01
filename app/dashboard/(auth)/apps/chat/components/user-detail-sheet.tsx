@@ -10,7 +10,6 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Image from "next/image";
 
 export function UserDetailSheet({ user }: { user: UserPropsTypes }) {
   const { showProfileSheet, toggleProfileSheet } = useChatStore();
@@ -66,13 +65,10 @@ export function UserDetailSheet({ user }: { user: UserPropsTypes }) {
                         <>
                           {item.type === "image" && (
                             <div>
-                              <Image
-                                width={40}
-                                height={40}
+                              <img
                                 className="size-20 rounded-lg"
                                 src={`${item.path}`}
                                 alt="shadcn/ui"
-                                unoptimized
                               />
                             </div>
                           )}
