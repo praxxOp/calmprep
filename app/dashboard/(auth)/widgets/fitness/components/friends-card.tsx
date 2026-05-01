@@ -7,19 +7,19 @@ const friends = [
     name: "Sarah Chen",
     activity: "Completed 10km run",
     time: "2h",
-    avatar: "/images/avatars/01.png"
+    avatar: "https://i.pravatar.cc/150?img=1"
   },
   {
     name: "Mike Johnson",
     activity: "New PR in deadlifts",
     time: "4h",
-    avatar: "/images/avatars/02.png"
+    avatar: "https://i.pravatar.cc/150?img=2"
   },
   {
     name: "Emma Davis",
     activity: "Joined yoga challenge",
     time: "6h",
-    avatar: "/images/avatars/03.png"
+    avatar: "/imageshttps://i.pravatar.cc/150?img=3"
   }
 ];
 

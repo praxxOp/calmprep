@@ -11,25 +11,25 @@ export function LeaderboardCard() {
       id: 1,
       name: "Liam Smith",
       points: 5000,
-      avatar: `/images/avatars/01.png`
+      avatar: `https://i.pravatar.cc/150?img=1`
     },
     {
       id: 2,
       name: "Emma Brown",
       points: 4800,
-      avatar: `/images/avatars/02.png`
+      avatar: `https://i.pravatar.cc/150?img=2`
     },
     {
       id: 3,
       name: "Noah Johnson",
       points: 4600,
-      avatar: `/images/avatars/03.png`
+      avatar: `/imageshttps://i.pravatar.cc/150?img=3`
     },
     {
       id: 4,
       name: "Olivia Davis",
       points: 4400,
-      avatar: `/images/avatars/04.png`
+      avatar: `https://i.pravatar.cc/150?img=4`
     }
   ];
 

@@ -22,7 +22,7 @@ export function VideoCallDialog() {
         </VisuallyHidden>
         <div className="flex items-center gap-4">
           <Avatar className="size-16">
-            <AvatarImage src={`/images/avatars/04.png`} alt="shadcn/ui avatar" />
+            <AvatarImage src={`https://i.pravatar.cc/150?img=4`} alt="shadcn/ui avatar" />
           </Avatar>
           <div className="text-lg">Jennica calling ...</div>
         </div>

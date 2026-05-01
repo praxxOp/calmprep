@@ -76,13 +76,13 @@ export default function KanbanBoard() {
         users: [
           {
             name: "Emma",
-            src: "/images/avatars/01.png",
+            src: "https://i.pravatar.cc/150?img=1",
             alt: "Emma Avatar",
             fallback: "EJ"
           },
           {
             name: "Daniel",
-            src: "/images/avatars/02.png",
+            src: "https://i.pravatar.cc/150?img=2",
             alt: "Daniel Avatar",
             fallback: "DS"
           }
@@ -101,13 +101,13 @@ export default function KanbanBoard() {
         users: [
           {
             name: "Lucas",
-            src: "/images/avatars/03.png",
+            src: "/imageshttps://i.pravatar.cc/150?img=3",
             alt: "Lucas Avatar",
             fallback: "LB"
           },
           {
             name: "Sophia",
-            src: "/images/avatars/04.png",
+            src: "https://i.pravatar.cc/150?img=4",
             alt: "Sophia Avatar",
             fallback: "SR"
           }
@@ -126,13 +126,13 @@ export default function KanbanBoard() {
         users: [
           {
             name: "Mia",
-            src: "/images/avatars/05.png",
+            src: "https://i.pravatar.cc/150?img=5",
             alt: "Mia Avatar",
             fallback: "MW"
           },
           {
             name: "Jack",
-            src: "/images/avatars/06.png",
+            src: "https://i.pravatar.cc/150?img=6",
             alt: "Jack Avatar",
             fallback: "JL"
           }
@@ -151,13 +151,13 @@ export default function KanbanBoard() {
         users: [
           {
             name: "Olivia",
-            src: "/images/avatars/07.png",
+            src: "https://i.pravatar.cc/150?img=7",
             alt: "Olivia Avatar",
             fallback: "OD"
           },
           {
             name: "Henry",
-            src: "/images/avatars/08.png",
+            src: "https://i.pravatar.cc/150?img=8",
             alt: "Henry Avatar",
             fallback: "HT"
           }
@@ -178,13 +178,13 @@ export default function KanbanBoard() {
         users: [
           {
             name: "Charlie",
-            src: "/images/avatars/09.png",
+            src: "https://i.pravatar.cc/150?img=9",
             alt: "Charlie Avatar",
             fallback: "CW"
           },
           {
             name: "Ava",
-            src: "/images/avatars/10.png",
+            src: "https://i.pravatar.cc/150?img=10",
             alt: "Ava Avatar",
             fallback: "AR"
           }
@@ -203,13 +203,13 @@ export default function KanbanBoard() {
         users: [
           {
             name: "Liam",
-            src: "/images/avatars/11.png",
+            src: "https://i.pravatar.cc/150?img=11",
             alt: "Liam Avatar",
             fallback: "LM"
           },
           {
             name: "Isabella",
-            src: "/images/avatars/12.png",
+            src: "https://i.pravatar.cc/150?img=12",
             alt: "Isabella Avatar",
             fallback: "IN"
           }
@@ -228,13 +228,13 @@ export default function KanbanBoard() {
         users: [
           {
             name: "Noah",
-            src: "/images/avatars/13.png",
+            src: "https://i.pravatar.cc/150?img=13",
             alt: "Noah Avatar",
             fallback: "NT"
           },
           {
             name: "Ella",
-            src: "/images/avatars/14.png",
+            src: "https://i.pravatar.cc/150?img=14",
             alt: "Ella Avatar",
             fallback: "EL"
           }
@@ -255,13 +255,13 @@ export default function KanbanBoard() {
         users: [
           {
             name: "Ethan",
-            src: "/images/avatars/15.png",
+            src: "https://i.pravatar.cc/150?img=15",
             alt: "Ethan Avatar",
             fallback: "EC"
           },
           {
             name: "Grace",
-            src: "/images/avatars/16.png",
+            src: "https://i.pravatar.cc/150?img=16",
             alt: "Grace Avatar",
             fallback: "GR"
           }
@@ -281,13 +281,13 @@ export default function KanbanBoard() {
         users: [
           {
             name: "Harper",
-            src: "/images/avatars/17.png",
+            src: "https://i.pravatar.cc/150?img=17",
             alt: "Harper Avatar",
             fallback: "HL"
           },
           {
             name: "Benjamin",
-            src: "/images/avatars/18.png",
+            src: "https://i.pravatar.cc/150?img=18",
             alt: "Benjamin Avatar",
             fallback: "BM"
           }
@@ -510,15 +510,15 @@ export default function KanbanBoard() {
         <div className="flex items-center space-x-2">
           <div className="flex -space-x-2 overflow-hidden">
             <Avatar className="border-background border-2">
-              <AvatarImage src="/images/avatars/05.png" alt="..." />
+              <AvatarImage src="https://i.pravatar.cc/150?img=5" alt="..." />
               <AvatarFallback>AT</AvatarFallback>
             </Avatar>
             <Avatar className="border-background border-2">
-              <AvatarImage src="/images/avatars/04.png" alt="..." />
+              <AvatarImage src="https://i.pravatar.cc/150?img=4" alt="..." />
               <AvatarFallback>AT</AvatarFallback>
             </Avatar>
             <Avatar className="border-background border-2">
-              <AvatarImage src="/images/avatars/03.png" alt="..." />
+              <AvatarImage src="/imageshttps://i.pravatar.cc/150?img=3" alt="..." />
               <AvatarFallback>AT</AvatarFallback>
             </Avatar>
             <Avatar className="border-background border-2">

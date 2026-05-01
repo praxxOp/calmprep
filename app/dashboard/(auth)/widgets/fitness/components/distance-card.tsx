@@ -23,11 +23,11 @@ export function DistanceCard() {
         <div className="flex items-center justify-between">
           <div className="flex -space-x-2">
             <Avatar className="border-card h-7 w-7 border-2">
-              <AvatarImage src="/images/avatars/10.png" />
+              <AvatarImage src="https://i.pravatar.cc/150?img=10" />
               <AvatarFallback>U1</AvatarFallback>
             </Avatar>
             <Avatar className="border-card h-7 w-7 border-2">
-              <AvatarImage src="/images/avatars/02.png" />
+              <AvatarImage src="https://i.pravatar.cc/150?img=2" />
               <AvatarFallback>U2</AvatarFallback>
             </Avatar>
           </div>

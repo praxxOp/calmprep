@@ -8,7 +8,7 @@
     "size": "5.8 GB",
     "owner": {
       "name": "User",
-      "avatar": "/images/avatars/01.png"
+      "avatar": "https://i.pravatar.cc/150?img=1"
     },
     "parentPath": "",
     "children": [
@@ -21,7 +21,7 @@
         "size": "2.1 GB",
         "owner": {
           "name": "User",
-          "avatar": "/images/avatars/02.png"
+          "avatar": "https://i.pravatar.cc/150?img=2"
         },
         "parentPath": "Design"
       },
@@ -34,7 +34,7 @@
         "size": "45 MB",
         "owner": {
           "name": "User",
-          "avatar": "/images/avatars/03.png"
+          "avatar": "/imageshttps://i.pravatar.cc/150?img=3"
         },
         "parentPath": "Design"
       }
@@ -49,7 +49,7 @@
     "size": "3.2 GB",
     "owner": {
       "name": "User",
-      "avatar": "/images/avatars/04.png"
+      "avatar": "https://i.pravatar.cc/150?img=4"
     },
     "parentPath": "",
     "children": [
@@ -62,7 +62,7 @@
         "size": "1.8 GB",
         "owner": {
           "name": "User",
-          "avatar": "/images/avatars/05.png"
+          "avatar": "https://i.pravatar.cc/150?img=5"
         },
         "parentPath": "Projects"
       },
@@ -75,7 +75,7 @@
         "size": "1.4 GB",
         "owner": {
           "name": "User",
-          "avatar": "/images/avatars/06.png"
+          "avatar": "https://i.pravatar.cc/150?img=6"
         },
         "parentPath": "Projects"
       }
@@ -90,7 +90,7 @@
     "size": "1.5 GB",
     "owner": {
       "name": "User",
-      "avatar": "/images/avatars/01.png"
+      "avatar": "https://i.pravatar.cc/150?img=1"
     },
     "parentPath": "",
     "children": [
@@ -103,7 +103,7 @@
         "size": "250 MB",
         "owner": {
           "name": "User",
-          "avatar": "/images/avatars/07.png"
+          "avatar": "https://i.pravatar.cc/150?img=7"
         },
         "parentPath": "Music"
       }
@@ -118,7 +118,7 @@
     "size": "1.7 GB",
     "owner": {
       "name": "User",
-      "avatar": "/images/avatars/09.png"
+      "avatar": "https://i.pravatar.cc/150?img=9"
     },
     "parentPath": "",
     "children": [
@@ -131,7 +131,7 @@
         "size": "890 MB",
         "owner": {
           "name": "User",
-          "avatar": "/images/avatars/08.png"
+          "avatar": "https://i.pravatar.cc/150?img=8"
         },
         "parentPath": "Pictures"
       }
@@ -146,7 +146,7 @@
     "size": "440 MB",
     "owner": {
       "name": "User",
-      "avatar": "/images/avatars/09.png"
+      "avatar": "https://i.pravatar.cc/150?img=9"
     },
     "parentPath": "",
     "children": [

@@ -6,12 +6,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const users = [
-  { name: "Emma Smith", avatar: `/images/avatars/08.png` },
-  { name: "Olivia Johnson", avatar: `/images/avatars/09.png` },
-  { name: "Ava Brown", avatar: `/images/avatars/03.png` },
-  { name: "Sophia Taylor", avatar: `/images/avatars/04.png` },
-  { name: "Isabella Anderson", avatar: `/images/avatars/05.png` },
-  { name: "Mia Thomas", avatar: `/images/avatars/06.png` }
+  { name: "Emma Smith", avatar: `https://i.pravatar.cc/150?img=8` },
+  { name: "Olivia Johnson", avatar: `https://i.pravatar.cc/150?img=9` },
+  { name: "Ava Brown", avatar: `/imageshttps://i.pravatar.cc/150?img=3` },
+  { name: "Sophia Taylor", avatar: `https://i.pravatar.cc/150?img=4` },
+  { name: "Isabella Anderson", avatar: `https://i.pravatar.cc/150?img=5` },
+  { name: "Mia Thomas", avatar: `https://i.pravatar.cc/150?img=6` }
 ];
 
 export function SuccessMetrics() {

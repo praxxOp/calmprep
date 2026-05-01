@@ -11,7 +11,7 @@ export function ProfileCard() {
         <div className="space-y-12">
           <div className="flex flex-col items-center space-y-4">
             <Avatar className="size-20">
-              <AvatarImage src={`/images/avatars/10.png`} alt="@shadcn" />
+              <AvatarImage src={`https://i.pravatar.cc/150?img=10`} alt="@shadcn" />
               <AvatarFallback>AH</AvatarFallback>
             </Avatar>
             <div className="text-center">

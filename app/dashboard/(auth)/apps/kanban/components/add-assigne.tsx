@@ -24,27 +24,27 @@ const users = [
   {
     name: "Olivia Martin",
     email: "m@example.com",
-    avatar: `/images/avatars/01.png`
+    avatar: `https://i.pravatar.cc/150?img=1`
   },
   {
     name: "Isabella Nguyen",
     email: "isabella.nguyen@email.com",
-    avatar: `/images/avatars/07.png`
+    avatar: `https://i.pravatar.cc/150?img=7`
   },
   {
     name: "Emma Wilson",
     email: "emma@example.com",
-    avatar: `/images/avatars/02.png`
+    avatar: `https://i.pravatar.cc/150?img=2`
   },
   {
     name: "Jackson Lee",
     email: "lee@example.com",
-    avatar: `/images/avatars/09.png`
+    avatar: `https://i.pravatar.cc/150?img=9`
   },
   {
     name: "William Kim",
     email: "will@email.com",
-    avatar: `/images/avatars/06.png`
+    avatar: `https://i.pravatar.cc/150?img=6`
   }
 ] as const;
 

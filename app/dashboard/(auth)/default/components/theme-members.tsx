@@ -45,21 +45,21 @@ const members = [
     id: 1,
     name: "Toby Belhome",
     email: "contact@bundui.io",
-    avatar: `/images/avatars/01.png`,
+    avatar: `https://i.pravatar.cc/150?img=1`,
     role_id: 1
   },
   {
     id: 2,
     name: "Jackson Lee",
     email: "pre@example.com",
-    avatar: `/images/avatars/02.png`,
+    avatar: `https://i.pravatar.cc/150?img=2`,
     role_id: 2
   },
   {
     id: 3,
     name: "Hally Gray",
     email: "hally@site.com",
-    avatar: `/images/avatars/03.png`,
+    avatar: `/imageshttps://i.pravatar.cc/150?img=3`,
     role_id: 1
   }
 ];

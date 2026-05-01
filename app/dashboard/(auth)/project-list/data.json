@@ -12,15 +12,15 @@
     "team": [
       {
         "id": 1,
-        "avatar": "/images/avatars/01.png"
+        "avatar": "https://i.pravatar.cc/150?img=1"
       },
       {
         "id": 2,
-        "avatar": "/images/avatars/02.png"
+        "avatar": "https://i.pravatar.cc/150?img=2"
       },
       {
         "id": 3,
-        "avatar": "/images/avatars/03.png"
+        "avatar": "/imageshttps://i.pravatar.cc/150?img=3"
       }
     ]
   },
@@ -37,11 +37,11 @@
     "team": [
       {
         "id": 1,
-        "avatar": "/images/avatars/03.png"
+        "avatar": "/imageshttps://i.pravatar.cc/150?img=3"
       },
       {
         "id": 2,
-        "avatar": "/images/images/avatars/04.png"
+        "avatar": "https://i.pravatar.cc/150?img=4"
       }
     ]
   },
@@ -58,19 +58,19 @@
     "team": [
       {
         "id": 1,
-        "avatar": "/images/avatars/05.png"
+        "avatar": "https://i.pravatar.cc/150?img=5"
       },
       {
         "id": 2,
-        "avatar": "/images/avatars/06.png"
+        "avatar": "https://i.pravatar.cc/150?img=6"
       },
       {
         "id": 3,
-        "avatar": "/images/avatars/07.png"
+        "avatar": "https://i.pravatar.cc/150?img=7"
       },
       {
         "id": 3,
-        "avatar": "/images/avatars/08.png"
+        "avatar": "https://i.pravatar.cc/150?img=8"
       }
     ]
   },
@@ -87,15 +87,15 @@
     "team": [
       {
         "id": 1,
-        "avatar": "/images/avatars/01.png"
+        "avatar": "https://i.pravatar.cc/150?img=1"
       },
       {
         "id": 2,
-        "avatar": "/images/avatars/02.png"
+        "avatar": "https://i.pravatar.cc/150?img=2"
       },
       {
         "id": 3,
-        "avatar": "/images/avatars/03.png"
+        "avatar": "/imageshttps://i.pravatar.cc/150?img=3"
       }
     ]
   },
@@ -113,7 +113,7 @@
     "team": [
       {
         "id": 1,
-        "avatar": "/images/avatars/10.png"
+        "avatar": "https://i.pravatar.cc/150?img=10"
       }
     ]
   },
@@ -130,15 +130,15 @@
     "team": [
       {
         "id": 1,
-        "avatar": "/images/avatars/01.png"
+        "avatar": "https://i.pravatar.cc/150?img=1"
       },
       {
         "id": 2,
-        "avatar": "/images/avatars/02.png"
+        "avatar": "https://i.pravatar.cc/150?img=2"
       },
       {
         "id": 3,
-        "avatar": "/images/avatars/03.png"
+        "avatar": "/imageshttps://i.pravatar.cc/150?img=3"
       }
     ]
   },
@@ -155,11 +155,11 @@
     "team": [
       {
         "id": 1,
-        "avatar": "/images/avatars/03.png"
+        "avatar": "/imageshttps://i.pravatar.cc/150?img=3"
       },
       {
         "id": 2,
-        "avatar": "/images/avatars/06.png"
+        "avatar": "https://i.pravatar.cc/150?img=6"
       }
     ]
   },
@@ -176,15 +176,15 @@
     "team": [
       {
         "id": 1,
-        "avatar": "/images/avatars/01.png"
+        "avatar": "https://i.pravatar.cc/150?img=1"
       },
       {
         "id": 2,
-        "avatar": "/images/avatars/02.png"
+        "avatar": "https://i.pravatar.cc/150?img=2"
       },
       {
         "id": 3,
-        "avatar": "/images/avatars/03.png"
+        "avatar": "/imageshttps://i.pravatar.cc/150?img=3"
       }
     ]
   }

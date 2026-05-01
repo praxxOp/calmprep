@@ -13,31 +13,31 @@ const connections = [
   {
     name: "Olivia Davis",
     email: "olivia.davis@example.com",
-    avatar: `/images/avatars/01.png`,
+    avatar: `https://i.pravatar.cc/150?img=1`,
     status: "connect"
   },
   {
     name: "John Doe",
     email: "john.doe@example.com",
-    avatar: `/images/avatars/02.png`,
+    avatar: `https://i.pravatar.cc/150?img=2`,
     status: "disconnect"
   },
   {
     name: "Alice Smith",
     email: "alice.smith@example.com",
-    avatar: `/images/avatars/03.png`,
+    avatar: `/imageshttps://i.pravatar.cc/150?img=3`,
     status: "connect"
   },
   {
     name: "Emily Martinez",
     email: "emily.martinez@example.com",
-    avatar: `/images/avatars/05.png`,
+    avatar: `https://i.pravatar.cc/150?img=5`,
     status: "disconnect"
   },
   {
     name: "James Wilson",
     email: "james.wilson@example.com",
-    avatar: `/images/avatars/06.png`,
+    avatar: `https://i.pravatar.cc/150?img=6`,
     status: "disconnect"
   }
 ];
