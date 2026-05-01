@@ -42,22 +42,22 @@ const items = [
 
 const colorClasses = {
   cyan: {
-    card: "bg-linear-to-tr from-cyan-200/40 to-cyan-100/40 dark:from-cyan-950/40 dark:to-cyan-900/40",
+    card: "bg-linear-to-tr from-cyan-200/40 to-cyan-100/40 dark:from-cyan-950/40 dark:to-cyan-900/40 border-cyan-300 dark:border-cyan-950",
     text: "text-cyan-900 dark:text-cyan-500",
     icon: "bg-cyan-800"
   },
   green: {
-    card: "bg-linear-to-tr from-green-200/40 to-green-100/40  dark:from-green-950/40 dark:to-green-900/40",
+    card: "bg-linear-to-tr from-green-200/40 to-green-100/40 dark:from-green-950/40 dark:to-green-900/40 border-green-300 dark:border-green-950",
     text: "text-green-900 dark:text-green-500",
     icon: "bg-green-800"
   },
   pink: {
-    card: "bg-linear-to-tr from-pink-200/40 to-pink-100/40  dark:from-pink-950/40 dark:to-pink-900/40",
+    card: "bg-linear-to-tr from-pink-200/40 to-pink-100/40 dark:from-pink-950/40 dark:to-pink-900/40 border-pink-200 dark:border-pink-950",
     text: "text-pink-900 dark:text-pink-500",
     icon: "bg-pink-800"
   },
   yellow: {
-    card: "bg-linear-to-tr from-yellow-200/40 to-yellow-100/40  dark:from-yellow-950/40 dark:to-yellow-900/40",
+    card: "bg-linear-to-tr from-yellow-200/40 to-yellow-100/40 dark:from-yellow-950/40 dark:to-yellow-900/40 border-yellow-300 dark:border-yellow-950",
     text: "text-yellow-900 dark:text-yellow-500",
     icon: "bg-yellow-800"
   }
@@ -77,7 +77,7 @@ export function StatCards() {
       {items.map((item, index) => {
         const IconComponent = iconMap[item.icon];
         return (
-          <Card key={index} className={`${colorClasses[item.color].card} border-0 shadow-none`}>
+          <Card key={index} className={`${colorClasses[item.color].card} shadow-none`}>
             <CardContent className="space-y-1">
               <div className="mb-4 flex items-start justify-between">
                 <div

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { Order, Table } from "@/app/dashboard/(auth)/apps/pos-system/store";
+import { Order, Table } from "../../store";
 
 import {
   Dialog,

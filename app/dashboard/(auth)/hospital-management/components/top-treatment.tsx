@@ -41,7 +41,7 @@ const segments = treatments.map((t) => ({
   color: getChartColorClass(t.colorKey)
 }));
 
-export default function TopTreatment() {
+export function TopTreatment() {
   return (
     <TooltipProvider>
       <Card>

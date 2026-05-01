@@ -1,13 +1,12 @@
 import { Metadata } from "next";
-import { promises as fs } from "fs";
 import Link from "next/link";
 import { PlusIcon } from "@radix-ui/react-icons";
-import path from "path";
 import { generateMeta } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import OrdersDataTable from "./data-table";
+import OrdersDataTable, { Order } from "./data-table";
+import ordersData from "./data.json";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
@@ -19,17 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-async function getOrders() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "app/dashboard/(auth)/pages/orders/data.json")
-  );
-
-  return JSON.parse(data.toString());
-}
-
-export default async function Page() {
-  const orders = await getOrders();
-
+export default function Page() {
   return (
     <div className="space-y-4">
       <div className="flex flex-row items-center justify-between">
@@ -48,7 +37,7 @@ export default async function Page() {
           <TabsTrigger value="returned">Returned</TabsTrigger>
           <TabsTrigger value="canceled">Canceled</TabsTrigger>
         </TabsList>
-        <OrdersDataTable data={orders} />
+        <OrdersDataTable data={ordersData as unknown as Order[]} />
       </Tabs>
     </div>
   );

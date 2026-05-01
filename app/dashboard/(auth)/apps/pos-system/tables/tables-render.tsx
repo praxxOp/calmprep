@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 
-import { Table, TableCategory } from "@/app/dashboard/(auth)/apps/pos-system/store";
+import { Table, TableCategory } from "../store";
 
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import TableListItem from "@/app/dashboard/(auth)/apps/pos-system/tables/components/table-list-item";
-import AddTableDialog from "@/app/dashboard/(auth)/apps/pos-system/tables/components/add-table-dialog";
+import TableListItem from "./components/table-list-item";
+import AddTableDialog from "./components/add-table-dialog";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 type PosSystemTableRender = {

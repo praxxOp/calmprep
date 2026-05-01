@@ -1,4 +1,8 @@
 import { Users, DollarSign, Building2, CheckCircle } from "lucide-react";
+
+import { Metadata } from "next";
+import { generateMeta } from "@/lib/utils";
+
 import { StatCard } from "./components/stat-card";
 import { PerformanceChart } from "./components/performance-chart";
 import { FeaturedProperty } from "./components/featured-property";
@@ -9,8 +13,7 @@ import { ActiveListingTable } from "./components/active-listing-table";
 import { LeadsContact } from "./components/leads-contact";
 import { SalesAnalyticsCard } from "./components/sales-analytics-card";
 import { PropertyOverviewCard } from "./components/property-overview-card";
-import { Metadata } from "next";
-import { generateMeta } from "@/lib/utils";
+
 import data from "./data.json";
 import type { ActiveListingRow, FeaturedPropertyItem, RealEstateProperty } from "./types";
 

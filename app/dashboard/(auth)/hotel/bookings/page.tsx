@@ -1,5 +1,6 @@
 import { generateMeta } from "@/lib/utils";
 import { Metadata } from "next";
+
 import { MeetingRoomSchedule } from "./components/meeting-room-schedule";
 
 export async function generateMetadata(): Promise<Metadata> {

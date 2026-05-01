@@ -1,4 +1,4 @@
-import { EnumTodoPriority, EnumTodoStatus } from "@/app/dashboard/(auth)/apps/todo-list-app/enum";
+import { EnumTodoPriority, EnumTodoStatus } from "./enum";
 
 export type TodoPriority = `${EnumTodoPriority}`;
 export type TodoStatus = `${EnumTodoStatus}`;

@@ -1,7 +1,8 @@
 import { generateMeta } from "@/lib/utils";
-import { promises as fs } from "fs";
-import path from "path";
-import PosSystemTableRender from "@/app/dashboard/(auth)/apps/pos-system/tables/tables-render";
+import PosSystemTableRender from "./tables-render";
+import { Table, TableCategory } from "../store";
+import tableCategoriesData from "../data/table-categories.json";
+import tablesData from "../data/tables.json";
 
 export async function generateMetadata() {
   return generateMeta({
@@ -12,23 +13,6 @@ export async function generateMetadata() {
   });
 }
 
-async function getTableCategories() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "app/dashboard/(auth)/apps/pos-system/data/table-categories.json")
-  );
-  return JSON.parse(data.toString());
-}
-
-async function getTables() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "app/dashboard/(auth)/apps/pos-system/data/tables.json")
-  );
-  return JSON.parse(data.toString());
-}
-
-export default async function Page() {
-  const tableCategories = await getTableCategories();
-  const tables = await getTables();
-
-  return <PosSystemTableRender tableCategories={tableCategories} tables={tables} />;
+export default function Page() {
+  return <PosSystemTableRender tableCategories={tableCategoriesData as unknown as TableCategory[]} tables={tablesData as unknown as Table[]} />;
 }

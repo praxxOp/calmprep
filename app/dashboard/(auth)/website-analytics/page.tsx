@@ -3,17 +3,15 @@ import { generateMeta } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import CalendarDateRangePicker from "@/components/custom-date-range-picker";
 
-import {
-  AverageDailySalesCard,
-  WebsiteAnalyticsCard,
-  SaleOverviewCard,
-  EarningReportsCard,
-  TicketsCard,
-  SalesByCountriesCard,
-  TotalEarningCard,
-  MonthlyCampaignStateCard
-} from "@/app/dashboard/(auth)/website-analytics/components";
-import StatCards from "@/app/dashboard/(auth)/website-analytics/components/stat-cards";
+import { AverageDailySalesCard } from "./components/average-daily-sales";
+import { WebsiteAnalyticsCard } from "./components/website-analytics-card";
+import { SaleOverviewCard } from "./components/sales-overflow-card";
+import { EarningReportsCard } from "./components/earning-reports-card";
+import { TicketsCard } from "./components/tickets-card";
+import { SalesByCountriesCard } from "./components/sales-by-countries-card";
+import { TotalEarningCard } from "./components/total-earning-card";
+import { MonthlyCampaignStateCard } from "./components/monthly-campaign-state";
+import { StatCards } from "./components/stat-cards";
 
 export async function generateMetadata() {
   return generateMeta({

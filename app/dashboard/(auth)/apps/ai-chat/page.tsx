@@ -1,5 +1,5 @@
 import { generateMeta } from "@/lib/utils";
-import AppRender from "@/app/dashboard/(auth)/apps/ai-chat/app-render";
+import AppRender from "./app-render";
 
 export async function generateMetadata() {
   return generateMeta({

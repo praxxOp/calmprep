@@ -9,18 +9,18 @@ import {
   ProductCategory,
   Table,
   TableCategory
-} from "@/app/dashboard/(auth)/apps/pos-system/store";
+} from "../store";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { RadioGroup } from "@/components/ui/radio-group";
-import ProductListItem from "@/app/dashboard/(auth)/apps/pos-system/components/product-list-item";
-import AddProductDialog from "@/app/dashboard/(auth)/apps/pos-system/components/add-product-dialog";
-import ProductCategoryListItem from "@/app/dashboard/(auth)/apps/pos-system/components/product-category-list-item";
+import ProductListItem from "./product-list-item";
+import AddProductDialog from "./add-product-dialog";
+import ProductCategoryListItem from "./product-category-list-item";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import POStSystemCart from "@/app/dashboard/(auth)/apps/pos-system/components/cart";
-import AssignOrderToTable from "@/app/dashboard/(auth)/apps/pos-system/components/assign-order-to-table";
-import POStSystemCartSheet from "@/app/dashboard/(auth)/apps/pos-system/components/cart-sheet";
+import POStSystemCart from "./cart";
+import AssignOrderToTable from "./assign-order-to-table";
+import POStSystemCartSheet from "./cart-sheet";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 type PosSystemMenu = {

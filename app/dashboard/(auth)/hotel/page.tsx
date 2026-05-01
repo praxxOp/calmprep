@@ -1,5 +1,8 @@
 import { generateMeta } from "@/lib/utils";
 import { Metadata } from "next";
+
+import { Button } from "@/components/ui/button";
+
 import { ReservationsCard } from "./components/reservations-card";
 import { CampaignOverview } from "./components/campaign-overview";
 import { RecentActivities } from "./components/recent-activities";
@@ -7,8 +10,8 @@ import { RevenueStat } from "./components/revenue-stat";
 import { StatCards } from "./components/stat-cards";
 import { BookingsCard } from "./components/bookings-card";
 import { BookingList } from "./components/booking-list";
+
 import { ClipboardMinusIcon, PlusIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({

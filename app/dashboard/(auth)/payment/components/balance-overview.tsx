@@ -1,7 +1,7 @@
 import { ChevronRight, Info } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { NotificationBanner } from "@/app/dashboard/(auth)/payment/components/notification-banner";
+import { NotificationBanner } from "./notification-banner";
 
 const balances = [
   { currency: "USD", amount: "1,240.30", flag: "🇺🇸" },

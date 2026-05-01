@@ -32,7 +32,7 @@ const data = [
   }
 ];
 
-export default function StatCards() {
+export function StatCards() {
   return (
     <div className="flex w-full items-center justify-center">
       <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

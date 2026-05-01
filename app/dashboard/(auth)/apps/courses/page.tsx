@@ -5,7 +5,11 @@ import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import { InstructorSection, CourseContent, StudyProgress, CourseModules } from "./components";
+
+import { InstructorSection } from "./components/instructor-section";
+import { CourseContent } from "./components/course-content";
+import { StudyProgress } from "./components/study-progress";
+import { CourseModules } from "./components/course-modules";
 
 import courseData from "./data.json";
 

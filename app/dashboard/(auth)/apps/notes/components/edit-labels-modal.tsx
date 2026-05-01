@@ -13,7 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { noteLabels } from "@/app/dashboard/(auth)/apps/notes/data";
+import { noteLabels } from "../data";
 import { PlusIcon } from "@radix-ui/react-icons";
 
 interface Props {

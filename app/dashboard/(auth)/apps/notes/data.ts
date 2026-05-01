@@ -1,4 +1,4 @@
-import { Note, NoteLabel } from "@/app/dashboard/(auth)/apps/notes/types";
+import { Note, NoteLabel } from "./types";
 
 export const notes: Note[] = [
   {

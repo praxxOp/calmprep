@@ -1,9 +1,9 @@
 import { generateMeta } from "@/lib/utils";
-import path from "path";
-import { promises as fs } from "fs";
 import { ChatItemProps, UserPropsTypes } from "./types";
 
 import { ChatSidebar, ChatContent } from "./components";
+import chatsData from "./data/chats.json";
+import contactsData from "./data/contacts.json";
 
 export async function generateMetadata() {
   return generateMeta({
@@ -15,34 +15,16 @@ export async function generateMetadata() {
   });
 }
 
-async function getChats() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "app/dashboard/(auth)/apps/chat/data/chats.json")
-  );
-  return JSON.parse(data.toString());
-}
-
-async function getChatUser(id: number) {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "app/dashboard/(auth)/apps/chat/data/contacts.json")
-  );
-
-  return JSON.parse(data.toString()).find((item: UserPropsTypes) => item.id === id);
-}
-
-export default async function Page() {
-  const chats = await getChats();
-
-  const chats_with_user = await Promise.all(
-    chats.map(async (item: ChatItemProps) => {
-      item.user = await getChatUser(item.user_id);
-      return item;
-    })
-  );
+export default function Page() {
+  const contacts = contactsData as unknown as UserPropsTypes[];
+  const chats = (chatsData as unknown as ChatItemProps[]).map((item) => ({
+    ...item,
+    user: contacts.find((contact) => contact.id === item.user_id) as UserPropsTypes
+  }));
 
   return (
     <div className="flex h-[calc(100vh-var(--header-height)-3rem)] w-full">
-      <ChatSidebar chats={chats_with_user} />
+      <ChatSidebar chats={chats} />
       <div className="grow">
         <ChatContent />
       </div>

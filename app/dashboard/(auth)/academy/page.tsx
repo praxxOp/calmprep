@@ -1,15 +1,13 @@
 import { generateMeta } from "@/lib/utils";
 
-import {
-  WelcomeCard,
-  LeaderboardCard,
-  LearningPathCard,
-  ChartMostActivity,
-  ProgressStatisticsCard,
-  StudentSuccessCard,
-  CourseProgressByMonth,
-  CoursesListTable
-} from "@/app/dashboard/(auth)/academy/components";
+import { WelcomeCard } from "./components/welcome-card";
+import { LeaderboardCard } from "./components/leader-board-card";
+import { LearningPathCard } from "./components/learning-path-card";
+import { ChartMostActivity } from "./components/chart-most-activity";
+import { ProgressStatisticsCard } from "./components/progress-statistics-card";
+import { StudentSuccessCard } from "./components/student-success-card";
+import { CourseProgressByMonth } from "./components/course-progress-by-month";
+import { CoursesListTable } from "./components/courses-list";
 
 export async function generateMetadata() {
   return generateMeta({

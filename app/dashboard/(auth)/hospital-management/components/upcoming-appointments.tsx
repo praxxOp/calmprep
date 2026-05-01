@@ -76,7 +76,7 @@ const appointments = [
   }
 ];
 
-export default function UpcomingAppointments() {
+export function UpcomingAppointments() {
   return (
     <Card className="col-span-4">
       <CardHeader>

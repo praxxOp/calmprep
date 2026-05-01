@@ -3,14 +3,14 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-import { useStore, Table } from "@/app/dashboard/(auth)/apps/pos-system/store";
+import { useStore, Table } from "../../store";
 import {
   EnumTableStatus,
   EnumTableStatusColor
-} from "@/app/dashboard/(auth)/apps/pos-system/enums";
+} from "../../enums";
 
 import { Badge } from "@/components/ui/badge";
-import TableDetailDialog from "@/app/dashboard/(auth)/apps/pos-system/tables/components/table-detail-dialog";
+import TableDetailDialog from "./table-detail-dialog";
 
 type TableListItem = {
   table: Table;

@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { generateAvatarFallback } from "@/lib/utils";
 import { Dribbble, Facebook, FileText, Instagram, Linkedin, SheetIcon, X } from "lucide-react";
-import useChatStore from "@/app/dashboard/(auth)/apps/chat/useChatStore";
-import { UserPropsTypes } from "@/app/dashboard/(auth)/apps/chat/types";
+import useChatStore from "../useChatStore";
+import { UserPropsTypes } from "../types";
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";

@@ -39,7 +39,7 @@ const chartConfig = {
   }
 } satisfies ChartConfig;
 
-export default function PatientVisitsChart() {
+export function PatientVisitsChart() {
   return (
     <Card className="col-span-4">
       <CardHeader>

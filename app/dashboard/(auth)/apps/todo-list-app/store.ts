@@ -6,7 +6,7 @@ import {
   ViewMode,
   TodoFile,
   TodoPriority
-} from "@/app/dashboard/(auth)/apps/todo-list-app/types";
+} from "./types";
 
 interface TodoStore {
   todos: Todo[];

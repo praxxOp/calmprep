@@ -1,7 +1,7 @@
 import React from "react";
 import { AlertCircleIcon, ImageIcon, Plus, UploadIcon, XIcon } from "lucide-react";
 
-import { ProductCategory } from "@/app/dashboard/(auth)/apps/pos-system/store";
+import { ProductCategory } from "../store";
 import { useFileUpload } from "@/hooks/use-file-upload";
 
 import {

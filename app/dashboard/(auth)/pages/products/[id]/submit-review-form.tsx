@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CirclePlusIcon } from "lucide-react";
 import { DialogDescription } from "@radix-ui/react-dialog";
-import { StarRating } from "@/app/dashboard/(auth)/pages/products/[id]/star-rating";
+import { StarRating } from "./star-rating";
 import React from "react";
 
 export default function SubmitReviewForm() {

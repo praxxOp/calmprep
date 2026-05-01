@@ -3,15 +3,14 @@ import { generateMeta } from "@/lib/utils";
 import CustomDateRangePicker from "@/components/custom-date-range-picker";
 import { Button } from "@/components/ui/button";
 
-import {
-  ChatWidget,
-  ExerciseMinutes,
-  LatestPayments,
-  PaymentMethodCard,
-  SubscriptionsCard,
-  TeamMembersCard,
-  TotalRevenueCard
-} from "./components";
+import { ChatWidget } from "./components/chat-widget";
+import { ExerciseMinutes } from "./components/exercise-minutes";
+import { LatestPayments } from "./components/latest-payments";
+import { PaymentMethodCard } from "./components/payment-method";
+import { SubscriptionsCard } from "./components/subscriptions";
+import { TeamMembersCard } from "./components/theme-members";
+import { TotalRevenueCard } from "./components/total-revenue";
+
 import { Download } from "lucide-react";
 
 export async function generateMetadata() {

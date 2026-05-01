@@ -1,13 +1,11 @@
 import { generateMeta } from "@/lib/utils";
 
-import {
-  FileUploadDialog,
-  TableRecentFiles,
-  SummaryCards,
-  StorageStatusCard,
-  ChartFileTransfer,
-  FolderListCards
-} from "@/app/dashboard/(auth)/file-manager/components";
+import { FileUploadDialog } from "./components/file-upload-dialog";
+import { TableRecentFiles } from "./components/table-recent-files";
+import { SummaryCards } from "./components/summary-cards";
+import { StorageStatusCard } from "./components/storage status-card";
+import { ChartFileTransfer } from "./components/chart-file-transfer";
+import { FolderListCards } from "./components/folder-list-cards";
 
 export async function generateMetadata() {
   return generateMeta({

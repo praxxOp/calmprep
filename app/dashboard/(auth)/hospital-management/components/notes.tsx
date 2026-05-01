@@ -20,7 +20,7 @@ interface Note {
   text: string;
 }
 
-export default function Notes() {
+export function Notes() {
   const [notes, setNotes] = React.useState<Note[]>([
     { id: 1, date: new Date(2025, 10, 15), text: "Dr. Smith's surgery at 10 AM" },
     { id: 2, date: new Date(2025, 4, 15), text: "Staff meeting at 2 PM" },

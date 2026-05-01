@@ -1,17 +1,16 @@
 import { generateMeta } from "@/lib/utils";
-
-import CalendarDateRangePicker from "@/components/custom-date-range-picker";
-import {
-  BalanceCard,
-  TaxCard,
-  IncomeCard,
-  ExpenseCard,
-  BestSellingProducts,
-  TableOrderStatus,
-  RevenueChart
-} from "@/app/dashboard/(auth)/sales/components";
-import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import CalendarDateRangePicker from "@/components/custom-date-range-picker";
+
+import { BalanceCard } from "./components/balance-card";
+import { TaxCard } from "./components/tax-card";
+import { IncomeCard } from "./components/income-card";
+import { ExpenseCard } from "./components/expense-card";
+import { BestSellingProducts } from "./components/best-selling-products";
+import { TableOrderStatus } from "./components/table-order-status";
+import { RevenueChart } from "./components/revenue-chart";
 
 export async function generateMetadata() {
   return generateMeta({

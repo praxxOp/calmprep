@@ -1,5 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { generateMeta } from "@/lib/utils";
 import Link from "next/link";
 import { PlusIcon } from "@radix-ui/react-icons";
@@ -8,7 +6,8 @@ import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import ProductList from "@/app/dashboard/(auth)/pages/products/product-list";
+import ProductList, { Product } from "./product-list";
+import productsData from "./data.json";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
@@ -20,16 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-async function getProducts() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "app/dashboard/(auth)/pages/products/data.json")
-  );
-  return JSON.parse(data.toString());
-}
-
-export default async function Page() {
-  const products = await getProducts();
-
+export default function Page() {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between space-y-2">
@@ -87,7 +77,7 @@ export default async function Page() {
         </Card>
       </div>
       <div className="pt-4">
-        <ProductList data={products} />
+        <ProductList data={productsData as unknown as Product[]} />
       </div>
     </div>
   );

@@ -175,7 +175,7 @@ const datesWithAppointments = (() => {
     });
 })();
 
-export default function PlannedCalendar() {
+export function PlannedCalendar() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   const appointmentsForSelectedDate = data.filter((item) => isSameDay(item.date, date));
 

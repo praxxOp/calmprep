@@ -1,4 +1,4 @@
-import { ProductCategory } from "@/app/dashboard/(auth)/apps/pos-system/store";
+import { ProductCategory } from "../store";
 import { RadioGroupItem } from "@/components/ui/radio-group";
 
 type ProductCategoryListItem = {

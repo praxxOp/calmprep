@@ -44,12 +44,12 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import CreateApiKeyDialog from "./create-api-key-dialog";
+import {CreateApiKeyDialog} from "./create-api-key-dialog";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 
-interface ApiKey {
+export interface ApiKey {
   id: number;
   name: string;
   api_key: string;
@@ -206,7 +206,7 @@ const copyToClipboard = (text: string) => {
   toast.success("Copied to clipboard");
 };
 
-export default function ApiKeysDataTable({ data }: { data: ApiKey[] }) {
+export function ApiKeysDataTable({ data }: { data: ApiKey[] }) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});

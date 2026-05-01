@@ -1,13 +1,12 @@
 import { generateMeta } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
-import {
-  OverviewCard,
-  RecentActivities,
-  DigitalWallets,
-  TradingCard,
-  BalanceSummeryChart
-} from "@/app/dashboard/(auth)/crypto/components";
+
+import { OverviewCard } from "./components/overview-card";
+import { RecentActivities } from "./components/recent-activities";
+import { DigitalWallets } from "./components/digital-wallets";
+import { TradingCard } from "./components/trading-card";
+import { BalanceSummeryChart } from "./components/chart-balance-summary";
 
 export async function generateMetadata() {
   return generateMeta({

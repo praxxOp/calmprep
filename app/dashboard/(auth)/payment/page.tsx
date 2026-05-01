@@ -1,7 +1,8 @@
+import { generateMeta } from "@/lib/utils";
+
 import { BalanceOverview } from "./components/balance-overview";
 import { TransactionHistory } from "./components/transaction-history";
 import { ExchangeRates } from "./components/exchange-rates";
-import { generateMeta } from "@/lib/utils";
 
 export async function generateMetadata() {
   return generateMeta({

@@ -37,7 +37,7 @@ const formSchema = z.object({
   date: z.date().optional()
 });
 
-export default function CreateApiKeyDialog() {
+export function CreateApiKeyDialog() {
   const [dialogOpen, setDialogOpen] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({

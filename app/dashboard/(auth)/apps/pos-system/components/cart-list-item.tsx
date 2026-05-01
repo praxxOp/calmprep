@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
 
-import { CartItem, useStore } from "@/app/dashboard/(auth)/apps/pos-system/store";
+import { CartItem, useStore } from "../store";
 
 import { Button } from "@/components/ui/button";
 

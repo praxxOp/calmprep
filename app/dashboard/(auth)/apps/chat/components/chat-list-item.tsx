@@ -4,7 +4,7 @@ import { ChatItemProps } from "../types";
 import { Ellipsis } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { ChatUserDropdown, MessageStatusIcon } from "@/app/dashboard/(auth)/apps/chat/components";
+import { ChatUserDropdown, MessageStatusIcon } from "./";
 import { Avatar, AvatarFallback, AvatarImage, AvatarIndicator } from "@/components/ui/avatar";
 
 export function ChatListItem({ chat, active }: { chat: ChatItemProps; active: boolean | null }) {

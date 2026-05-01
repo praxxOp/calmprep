@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
-export default function UpgradePlanCard() {
+export function UpgradePlanCard() {
   return (
     <Card>
       <CardHeader>

@@ -1,16 +1,15 @@
 import CustomDateRangePicker from "@/components/custom-date-range-picker";
 import { Button } from "@/components/ui/button";
 import { generateMeta } from "@/lib/utils";
-import {
-  LeadBySourceCard,
-  SalesPipeline,
-  LeadsCard,
-  TargetCard,
-  TotalCustomersCard,
-  TotalDeals,
-  TotalRevenueCard,
-  RecentTasks
-} from "@/app/dashboard/(auth)/crm/components";
+
+import { LeadBySourceCard } from "./components/leads-by-source";
+import { SalesPipeline } from "./components/sales-pipeline";
+import { LeadsCard } from "./components/leads";
+import { TargetCard } from "./components/target-card";
+import { TotalCustomersCard } from "./components/total-customers";
+import { TotalDeals } from "./components/total-deals";
+import { TotalRevenueCard } from "./components/total-revenue";
+import { RecentTasks } from "./components/recent-tasks";
 
 export async function generateMetadata() {
   return generateMeta({

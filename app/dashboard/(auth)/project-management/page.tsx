@@ -11,16 +11,14 @@ import { Button } from "@/components/ui/button";
 import { FolderUp } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import {
-  SummaryCards,
-  AchievementByYear,
-  ChartProjectOverview,
-  ChartProjectEfficiency,
-  TableRecentProjects,
-  Reminders,
-  SuccessMetrics,
-  Reports
-} from "./components";
+import { SummaryCards } from "./components/summary-cards";
+import { AchievementByYear } from "./components/achievement-by-year";
+import { ChartProjectOverview } from "./components/chart-project-overview";
+import { ChartProjectEfficiency } from "./components/chart-project-efficiency";
+import { TableRecentProjects } from "./components/table-recent-projects";
+import { Reminders } from "./components/reminders";
+import { SuccessMetrics } from "./components/success-metrics";
+import { Reports } from "./components/reports";
 
 export async function generateMetadata() {
   return generateMeta({

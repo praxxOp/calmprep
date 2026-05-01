@@ -47,7 +47,7 @@ const patients = [
   }
 ];
 
-export default function PatientsWithLastProcedure() {
+export function PatientsWithLastProcedure() {
   return (
     <Card className="col-span-3">
       <CardHeader className="relative">

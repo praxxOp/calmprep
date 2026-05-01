@@ -1,15 +1,9 @@
 import { generateMeta } from "@/lib/utils";
-import { promises as fs } from "fs";
-import path from "path";
 
 import Tasks from "./components/tasks";
 
-async function getTasks() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "app/dashboard/(auth)/apps/todo-list-app/data/tasks.json")
-  );
-  return JSON.parse(data.toString());
-}
+import tasksData from "./data/tasks.json";
+import { Todo } from "./types";
 
 export async function generateMetadata() {
   return generateMeta({
@@ -21,8 +15,6 @@ export async function generateMetadata() {
   });
 }
 
-export default async function Page() {
-  const tasks = await getTasks();
-
-  return <Tasks tasks={tasks} />;
+export default function Page() {
+  return <Tasks tasks={tasksData as unknown as Todo[]} />;
 }

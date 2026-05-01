@@ -1,5 +1,5 @@
 import * as z from "zod";
-import { EnumTodoPriority, EnumTodoStatus } from "@/app/dashboard/(auth)/apps/todo-list-app/enum";
+import { EnumTodoPriority, EnumTodoStatus } from "./enum";
 
 export const todoFormSchema = z.object({
   title: z.string().min(1, "Title is required"),

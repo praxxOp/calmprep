@@ -2,7 +2,7 @@ import { Card, CardAction, CardDescription, CardHeader } from "@/components/ui/c
 import CountAnimation from "@/components/ui/custom/count-animation";
 import { Badge } from "@/components/ui/badge";
 
-export default function SuccessfulConversionsCard() {
+export function SuccessfulConversionsCard() {
   return (
     <Card>
       <CardHeader>

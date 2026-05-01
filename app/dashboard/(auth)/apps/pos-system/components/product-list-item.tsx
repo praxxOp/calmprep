@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { ShoppingCartIcon } from "lucide-react";
 
-import { Product, useStore } from "@/app/dashboard/(auth)/apps/pos-system/store";
+import { Product, useStore } from "../store";
 
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";

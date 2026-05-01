@@ -8,7 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
-import useChatStore from "@/app/dashboard/(auth)/apps/chat/useChatStore";
+import useChatStore from "../useChatStore";
 
 export function ChatUserDropdown({ children }: { children: React.ReactNode }) {
   const { toggleProfileSheet } = useChatStore();

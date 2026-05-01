@@ -1,11 +1,12 @@
 import { generateMeta } from "@/lib/utils";
-import { promises as fs } from "fs";
-import path from "path";
-import ApiKeysDataTable from "./components/datatable";
-import UpgradePlanCard from "./components/upgrade-plan-card";
-import SuccessfulConversionsCard from "./components/successful-conversions-card";
-import FailedConversionsCard from "./components/failed-conversions-card";
-import ApiCallsCard from "./components/api-calls-card";
+
+import { ApiKeysDataTable } from "./components/datatable";
+import { UpgradePlanCard } from "./components/upgrade-plan-card";
+import { SuccessfulConversionsCard } from "./components/successful-conversions-card";
+import { FailedConversionsCard } from "./components/failed-conversions-card";
+import { ApiCallsCard } from "./components/api-calls-card";
+import { ApiKey } from "./components/datatable";
+import apiKeysData from "./data.json";
 
 export async function generateMetadata() {
   return generateMeta({
@@ -17,16 +18,7 @@ export async function generateMetadata() {
   });
 }
 
-async function getApiKeys() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "app/dashboard/(auth)/apps/api-keys/data.json")
-  );
-  return JSON.parse(data.toString());
-}
-
-export default async function Page() {
-  const apiKeys = await getApiKeys();
-
+export default function Page() {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between space-y-2">
@@ -38,7 +30,7 @@ export default async function Page() {
         <FailedConversionsCard />
         <ApiCallsCard />
       </div>
-      <ApiKeysDataTable data={apiKeys} />
+      <ApiKeysDataTable data={apiKeysData as unknown as ApiKey[]} />
     </div>
   );
 }

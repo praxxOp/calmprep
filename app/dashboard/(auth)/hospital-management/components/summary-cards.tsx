@@ -3,7 +3,7 @@ import { CalendarIcon, CreditCardIcon, DollarSignIcon, UsersIcon } from "lucide-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import CountAnimation from "@/components/ui/custom/count-animation";
 
-export default function SummaryCards() {
+export function SummaryCards() {
   return (
     <div className="overflow-hidden rounded-md border">
       <div className="grid divide-y-1! md:grid-cols-2 md:divide-x-1! lg:grid-cols-4 lg:divide-y-0! [&>*:nth-child(2)]:border-e-0! md:[&>*:nth-child(2)]:border-e-0! lg:[&>*:nth-child(2)]:border-e-1!">

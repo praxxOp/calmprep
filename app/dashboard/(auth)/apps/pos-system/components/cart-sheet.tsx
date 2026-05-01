@@ -3,10 +3,10 @@
 import React from "react";
 import { ShoppingBasketIcon, Utensils } from "lucide-react";
 
-import { useStore } from "@/app/dashboard/(auth)/apps/pos-system/store";
+import { useStore } from "../store";
 
 import { Card, CardContent } from "@/components/ui/card";
-import CartListItem from "@/app/dashboard/(auth)/apps/pos-system/components/cart-list-item";
+import CartListItem from "./cart-list-item";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";

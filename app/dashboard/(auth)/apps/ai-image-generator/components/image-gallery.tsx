@@ -1,7 +1,7 @@
 import React from "react";
 import { Image as ImageIcon } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import ImageItem from "@/app/dashboard/(auth)/apps/ai-image-generator/components/image-item";
+import ImageItem from "./image-item";
 
 export interface GeneratedImage {
   id: string;

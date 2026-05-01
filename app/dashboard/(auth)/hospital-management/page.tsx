@@ -4,15 +4,16 @@ import { Download } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 
-import PatientVisitsChart from "./components/patient-visits-chart";
-import PatientsByDepartmentChart from "./components/patients-by-department-chart";
-import UpcomingAppointments from "./components/upcoming-appointments";
-import PatientsWithLastProcedure from "./components/patients-with-last-procedure";
-import Notes from "./components/notes";
-import HospitalReports from "./components/reports";
-import PlannedCalendar from "./components/planned-calendar";
-import SummaryCards from "./components/summary-cards";
-import TopTreatment from "./components/top-treatment";
+import { PatientVisitsChart } from "./components/patient-visits-chart";
+import { PatientsByDepartmentChart } from "./components/patients-by-department-chart";
+import { UpcomingAppointments } from "./components/upcoming-appointments";
+import { PatientsWithLastProcedure } from "./components/patients-with-last-procedure";
+import { Notes } from "./components/notes";
+import { HospitalReports } from "./components/reports";
+import { PlannedCalendar } from "./components/planned-calendar";
+import { SummaryCards } from "./components/summary-cards";
+import { TopTreatment } from "./components/top-treatment";
+
 import CustomDateRangePicker from "@/components/custom-date-range-picker";
 
 export async function generateMetadata() {

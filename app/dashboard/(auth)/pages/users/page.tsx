@@ -1,12 +1,10 @@
-import { promises as fs } from "fs";
-import path from "path";
-
 import Link from "next/link";
 import { generateMeta } from "@/lib/utils";
 
 import { PlusCircledIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
-import UsersDataTable from "./data-table";
+import UsersDataTable, { User } from "./data-table";
+import usersData from "./data.json";
 
 export async function generateMetadata() {
   return generateMeta({
@@ -18,16 +16,7 @@ export async function generateMetadata() {
   });
 }
 
-async function getUsers() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "app/dashboard/(auth)/pages/users/data.json")
-  );
-  return JSON.parse(data.toString());
-}
-
-export default async function Page() {
-  const users = await getUsers();
-
+export default function Page() {
   return (
     <>
       <div className="flex items-center justify-between space-y-2">
@@ -38,7 +27,7 @@ export default async function Page() {
           </Link>
         </Button>
       </div>
-      <UsersDataTable data={users} />
+      <UsersDataTable data={usersData as unknown as User[]} />
     </>
   );
 }

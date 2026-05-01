@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { ArrowRight, CircleCheck, PlusCircleIcon } from "lucide-react";
-import { AddReminderDialog } from "@/app/dashboard/(auth)/project-management/components/add-reminder-dialog";
+import { AddReminderDialog } from "./add-reminder-dialog";
 
 type Reminder = {
   id: number;

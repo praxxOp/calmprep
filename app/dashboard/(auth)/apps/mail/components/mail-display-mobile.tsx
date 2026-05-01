@@ -10,7 +10,7 @@ import {
   ReplyAll,
   Trash2
 } from "lucide-react";
-import { useMailStore } from "@/app/dashboard/(auth)/apps/mail/use-mail";
+import { useMailStore } from "../use-mail";
 
 import { DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";

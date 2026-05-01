@@ -19,7 +19,7 @@ import {
   SelectValue
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { TableCategory } from "@/app/dashboard/(auth)/apps/pos-system/store";
+import { TableCategory } from "../../store";
 
 type AddTableDialog = {
   tableCategories: TableCategory[];
