@@ -4,6 +4,9 @@ A GenAI wellness companion that helps students monitor and improve their mental
 well-being during high-stakes exams (NEET / JEE / CAT / GATE / UPSC). Built for
 the PromptWars hackathon.
 
+> **Quick demo:** sign in with `demo@saathi.app` / `Saathi@1234` to explore Saathi
+> pre-loaded with sample data.
+
 ## About
 
 Saathi ("companion" in Hindi) pairs daily journaling and quick mood check-ins with
@@ -11,12 +14,6 @@ an empathetic AI companion that analyses open-ended entries to surface **hidden 
 emotional patterns**, visualises mood/stress trends over time, and offers grounded,
 safe, supportive guidance in real time. Built on the **Next.js App Router**, styled
 with **Tailwind CSS v4** and **shadcn/ui** (New York), written entirely in **TypeScript**.
-
-### Features
-- **Daily Journal** — open-ended writing; Gemini extracts sentiment, triggers, themes (`/dashboard/journal`)
-- **Mood Check-in** — 10-second mood/energy/stress + tags, logged as often as you like (`/dashboard/mood`)
-- **Insights** — mood-trend chart, top stress triggers, streaks, and an AI "what your data says" summary (`/dashboard/insights`)
-- **AI Companion** — streaming, context-aware, **crisis-safe** empathetic chat (`/dashboard/companion`)
 
 ## Tech Stack
 
@@ -32,65 +29,44 @@ with **Tailwind CSS v4** and **shadcn/ui** (New York), written entirely in **Typ
 | Notifications | Sonner |
 | Theme | next-themes (dark mode) |
 
-## Requirements
+## Accounts
 
-- Node.js **v20+** (v22 recommended — the seed script uses `--env-file`)
+There are two ways to get in:
 
-## Setup
+- **Use the demo account (already loaded with data).** Sign in with the demo
+  credentials above. It comes pre-filled with sample mood check-ins and analysed journal
+  entries, so every module looks alive the moment you sign in. Best if you just want to
+  explore.
 
-**1. Clone & install**
+- **Create a new account.** Register at `/dashboard/register`, pick the exam you're
+  preparing for, and start from a clean slate. Everything you log (journal, moods, chats)
+  stays private to you, enforced by row-level security.
 
-```sh
-git clone https://github.com/praxxOp/calmprep.git
-cd calmprep
-npm install
-```
+## Modules
 
-**2. Configure environment variables**
+- **Daily Journal** (`/dashboard/journal`)
+  An open-ended writing space. When you save an entry, Gemini reads it and pulls out the
+  sentiment, the concrete stress triggers, and recurring themes, the signals a plain mood
+  slider would miss. Each analysis is cached so the same entry is never re-billed.
 
-Copy `.env.example` → `.env.local` and fill in:
+- **Mood Check-in** (`/dashboard/mood`)
+  A 10-second check-in for mood, energy, and stress (1-5) plus quick tags like
+  "exam-pressure" or "sleep". Log it as often as you like; it feeds both the trends and
+  the companion's context.
 
-| Variable | Where to get it |
-|---|---|
-| `GEMINI_API_KEY` | https://aistudio.google.com/apikey |
-| `GEMINI_MODEL` | leave as `gemini-2.5-flash` |
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase → Project Settings → API → **Project URL** |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → API → **anon / public** key |
-| `SUPABASE_SERVICE_ROLE_KEY` | Supabase → API → **service_role** key (server-only) |
+- **Insights** (`/dashboard/insights`)
+  Your personal dashboard: a 14-day mood-and-stress trend chart, your top stress
+  triggers, streaks and stat cards, and an AI "what your data says" summary that names
+  one real pattern and one doable suggestion.
 
-> Never commit `.env.local` (it's gitignored). Keep `.env.example` placeholder-only.
+- **AI Companion** (`/dashboard/companion`)
+  A streaming, empathetic chat ("Saathi") that already knows your recent moods, triggers,
+  and exam target, so its support is personal rather than generic. Crisis signals are
+  caught before any model call and answered with calm, non-clinical help (see Safety).
 
-**3. Create the database**
-
-Open Supabase → **SQL Editor** → paste the contents of [`supabase/schema.sql`](supabase/schema.sql) → **Run**.
-This creates the tables, indexes, the auto-profile trigger, and Row Level Security.
-
-**4. (Optional) Seed a demo user + sample data**
-
-```sh
-node --env-file=.env.local scripts/seed.mjs
-```
-
-This creates a confirmed demo account and populates ~12 mood logs and 4 analysed
-journal entries so the dashboard looks alive.
-
-**Demo credentials**
-
-```
-email:    demo@saathi.app
-password: Saathi@1234
-```
-
-> Or just register a new account at `/dashboard/register`. (For instant local login,
-> turn OFF "Confirm email" in Supabase → Authentication → Providers → Email.)
-
-**5. Run**
-
-```sh
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
+- **Exam switcher** (top bar)
+  Set or change the exam you're preparing for at any time. It tailors the companion's
+  tone and the insights summary to that exam's specific pressures.
 
 ## Project structure
 
