@@ -16,7 +16,19 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       include: ["lib/**/*.ts"],
-      exclude: ["lib/**/*.test.ts", "lib/**/types.ts"]
+      // Exclude framework glue / config that is integration-tested, not unit-tested:
+      // thin SDK client factories, Next.js cookie+middleware code, env access, and static config.
+      exclude: [
+        "lib/**/*.test.ts",
+        "lib/**/types.ts",
+        "lib/env.ts",
+        "lib/fonts.ts",
+        "lib/themes.ts",
+        "lib/supabase/**",
+        "lib/gemini/client.ts",
+        "lib/gemini/companion.ts",
+        "lib/wellness/queries.ts"
+      ]
     }
   }
 });

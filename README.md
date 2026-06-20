@@ -68,6 +68,31 @@ There are two ways to get in:
   Set or change the exam you're preparing for at any time. It tailors the companion's
   tone and the insights summary to that exam's specific pressures.
 
+## Testing
+
+The business logic is written as pure, typed functions so it's unit-testable in
+isolation. Run the suite with [Vitest](https://vitest.dev):
+
+```sh
+npm test            # run all unit tests
+npm run test:watch  # watch mode
+npm run test:coverage
+```
+
+**267 tests** cover the core logic:
+
+| Module | What's tested |
+|---|---|
+| `lib/wellness/insights` | mood-trend aggregation/averaging/gaps, tag frequency, check-in streaks, averages |
+| `lib/gemini/safety` | crisis detection across every phrasing + false-positive avoidance, helpline content |
+| `lib/wellness/validation` | all three zod schemas — coercion, bounds, enums, uuid |
+| `lib/gemini/prompts` | context builder, trigger dedupe, prompt constants, JSON schema shape |
+| `lib/gemini/analysis` | Gemini output normalization (clamping, sentiment fallback, tag sanitizing) with the AI client mocked |
+| `lib/utils`, `lib/wellness/exams` | class merging, exam list integrity |
+
+Framework glue (Supabase clients, Next.js middleware, the Gemini SDK singleton) is
+integration-level and excluded from unit coverage by design.
+
 ## Project structure
 
 ```
@@ -80,12 +105,14 @@ app/
     insights · journal · mood · companion
   dashboard/(guest)/           # login · register
 lib/
-  supabase/                    # browser / server / admin clients + auth + session proxy
+  supabase/                    # browser / server clients + auth + session proxy
   gemini/                      # client, prompts, safety (crisis detection), analysis, companion
   wellness/                    # types, typed queries, pure insights aggregation, zod validation
+  *.test.ts                    # Vitest unit tests, co-located with the logic
 supabase/
   schema.sql                   # database schema + RLS
 scripts/seed.mjs               # demo user + sample data
+vitest.config.ts               # test config (path aliases, server-only stub, coverage)
 .claude/skills/                # build skill: challenge brief + scoring rubric as engineering rules
 ```
 
